@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #1b3a4b;
+  --color-brand-darker: #0f2430;
+  --color-brand-coral: #e05a47;
+  --color-brand-teal: #4ecaca;
+  --color-brand-gold: #f0c135;
+  --color-brand-cream: #fdf6e3;
+
+  --font-display: "Righteous", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-darker text-brand-cream font-body;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}

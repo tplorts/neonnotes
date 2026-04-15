@@ -3,18 +3,20 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Neon Notes">
-  <section>
-    <h2>Welcome</h2>
-    <p>TODO: short intro to the concert series for children.</p>
+  <section class="text-center mb-16">
+    <h2 class="text-4xl text-brand-gold mb-4">Welcome</h2>
+    <p class="text-lg text-brand-cream/80 max-w-xl mx-auto">
+      TODO: short intro to the concert series for children.
+    </p>
   </section>
 
   <section>
-    <h2>Upcoming Event</h2>
-    <article>
-      <h3>TODO: event name</h3>
-      <p><strong>Date:</strong> TODO</p>
-      <p><strong>Venue:</strong> TODO</p>
-      <p>TODO: event description.</p>
+    <h2 class="text-2xl text-brand-teal mb-6 pb-2 border-b border-brand-teal/30">Upcoming Event</h2>
+    <article class="bg-brand-dark rounded-2xl p-6 border border-brand-teal/20">
+      <h3 class="text-xl text-brand-gold font-display mb-4">TODO: event name</h3>
+      <p class="mb-2"><span class="text-brand-coral font-semibold">Date:</span> TODO</p>
+      <p class="mb-4"><span class="text-brand-coral font-semibold">Venue:</span> TODO</p>
+      <p class="text-brand-cream/70">TODO: event description.</p>
     </article>
   </section>
 </BaseLayout>
