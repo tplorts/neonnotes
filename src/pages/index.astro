@@ -46,7 +46,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Bringing the Las Vegas community together through high-quality live music — an intentional space for the next generation to experience the energy of a real performance.
         </p>
         <p class="text-seafoam font-semibold text-xl italic leading-relaxed tracking-[0.05em] mb-7">Where every little local has a front-row seat.</p>
-        <a href="#" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
+        <a href="https://www.eventbrite.com/e/neon-notes-live-jazz-music-for-little-locals-ages-0-7-tickets-1987475100527?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
           Book a Spot
         </a>
       </div>
@@ -75,7 +75,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="pb-12">
     <div class="max-w-4xl mx-auto px-6">
 
-      <article class="border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
+      <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
+
+        <!-- Age badge — overlaps top-right corner -->
+        <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);">
+          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+            <polygon
+              points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
+              fill="#FFC82C" stroke="#2b2b2b" stroke-width="3"
+            />
+            <text x="60" y="51" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="13" fill="#2b2b2b" letter-spacing="2">AGES</text>
+            <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">0–7</text>
+          </svg>
+        </div>
 
         <h3 class="text-3xl md:text-5xl text-charcoal font-display mb-8">
           <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-[10px]">The Debut Session: Live Jazz</span>
@@ -128,15 +140,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <ul class="space-y-2 text-sm">
                 <li class="flex items-start gap-2 text-sand">
                   <span class="text-mustard font-bold mt-px">✦</span>
-                  <span>Doors open: 9:30 AM</span>
-                </li>
-                <li class="flex items-start gap-2 text-sand">
-                  <span class="text-mustard font-bold mt-px">✦</span>
-                  <span>Music starts: 10:00 AM</span>
+                  <span>10:00 AM – 11:00 AM <span class="text-sand/60 italic">(Showtime)</span></span>
                 </li>
                 <li class="flex items-start gap-2 text-sand">
                   <span class="text-mustard font-bold mt-px">✦</span>
                   <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
+                </li>
+                <li class="flex items-start gap-2 text-sand">
+                  <span class="text-mustard font-bold mt-px">✦</span>
+                  <span class="font-black tracking-widest uppercase text-xs">Best for Ages 0–7</span>
                 </li>
               </ul>
             </div>
@@ -165,7 +177,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </li>
                 <li class="flex items-center py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">Little Locals Under 2</span>
+                  <span class="text-sand flex-1">
+                    Little Locals Under 2
+                    <span class="block text-sand/50 text-[10px] font-light normal-case tracking-normal italic">This session curated for ages 0–7</span>
+                  </span>
                   <span class="font-mono font-black text-mustard text-base">Free!</span>
                 </li>
               </ul>
@@ -241,7 +256,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
 
-        <a href="#" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
+        <a href="https://www.eventbrite.com/e/neon-notes-live-jazz-music-for-little-locals-ages-0-7-tickets-1987475100527?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
           Secure Your Spot
         </a>
 
