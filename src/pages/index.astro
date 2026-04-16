@@ -15,6 +15,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     z-index: 0;
   }
 
+  details .faq-close { display: none; }
+  details[open] .faq-open { display: none; }
+  details[open] .faq-close { display: inline; }
+  details summary::-webkit-details-marker { display: none; }
+
   .story-drop-cap::first-letter {
     initial-letter: 3;
     color: #2b2b2b;
@@ -26,7 +31,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout title="Neon Notes">
 
   <!-- Hero -->
-  <section class="hero-poster bg-charcoal py-12 relative overflow-hidden">
+  <section class="hero-poster bg-charcoal py-8 md:py-12 relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-10">
 
       <!-- Text block -->
@@ -70,14 +75,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="pb-12">
     <div class="max-w-4xl mx-auto px-6">
 
-      <article class="border-2 border-charcoal p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
+      <article class="border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
 
-        <h3 class="text-5xl text-charcoal font-display mb-8">
-          <span class="decoration-4 decoration-mustard underline underline-offset-[10px]">The Debut Session: Live Jazz</span>
+        <h3 class="text-3xl md:text-5xl text-charcoal font-display mb-8">
+          <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-[10px]">The Debut Session: Live Jazz</span>
         </h3>
         <p class="text-charcoal text-lg mb-8">Join us for an intentional morning of live jazz music for the family.</p>
 
-        <div class="grid grid-cols-2 gap-3 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
 
           <!-- The Vibe — Midnight Charcoal -->
           <div class="relative overflow-hidden bg-charcoal border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
@@ -150,18 +155,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </li>
                 <li class="flex items-center border-b border-sand/10 py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">Trio Bundle <span class="text-sand text-xs">(3)</span></span>
+                  <span class="text-sand flex-1">The Trio</span>
                   <span class="font-mono font-black text-mustard text-base tabular-nums">$54</span>
                 </li>
                 <li class="flex items-center border-b border-sand/10 py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">Family Jam <span class="text-sand text-xs">(4)</span></span>
+                  <span class="text-sand flex-1">Family Jam</span>
                   <span class="font-mono font-black text-mustard text-base tabular-nums">$68</span>
                 </li>
                 <li class="flex items-center py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">Little Locals under 2</span>
-                  <span class="font-mono font-black text-mustard text-base">Free</span>
+                  <span class="text-sand flex-1">Little Locals Under 2</span>
+                  <span class="font-mono font-black text-mustard text-base">Free!</span>
                 </li>
               </ul>
             </div>
@@ -175,6 +180,67 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         </div>
 
+        <!-- Know Before You Go -->
+        <div class="mb-8">
+          <div class="flex items-center gap-5 mb-5">
+            <div class="w-12 border-t-2 border-charcoal"></div>
+            <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Know Before You Go</p>
+            <div class="flex-1 border-t-2 border-charcoal"></div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+            <!-- The Arrival — Mustard -->
+            <div class="bg-mustard border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
+              <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">Arrival &amp; Timing</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> Arrive early to settle in and grab a drink.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">10:00 – 11:00 AM | Showtime:</span> A one-hour live jazz set.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- The Setup — Seafoam -->
+            <div class="bg-seafoam border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
+              <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">The Setup</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Bring a Blanket:</span> We've cleared the floor for dancing. Please bring a cozy blanket for your picnic spot.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Food &amp; Drink:</span> Feel free to bring your own snacks. A local vendor <span class="italic">(TBA)</span> will also have treats and beverages for purchase.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- The Comfort — Coral -->
+            <div class="bg-coral border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
+              <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">The Comfort</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
+                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
         <a href="#" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
           Secure Your Spot
         </a>
@@ -184,8 +250,62 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="bg-sand-grain py-16">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Section header -->
+      <div class="flex flex-col items-center pb-12">
+        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+        <div class="flex items-center gap-5">
+          <div class="w-24 border-t-2 border-charcoal"></div>
+          <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Common Questions</p>
+          <div class="w-24 border-t-2 border-charcoal"></div>
+        </div>
+      </div>
+
+      <!-- FAQ Items -->
+      <div class="border-t-2 border-charcoal">
+
+        <details class="border-b-2 border-charcoal group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-body font-black text-charcoal text-sm tracking-[0.1em] uppercase pr-4">Will the music be too loud for little ears?</span>
+            <span class="font-mono font-black text-charcoal text-xl shrink-0">
+              <span class="faq-open">+</span>
+              <span class="faq-close">−</span>
+            </span>
+          </summary>
+          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">We work closely with our musicians to keep the volume at a family-friendly level. That said, we always recommend bringing ear protection for very young babies — better safe than sorry.</p>
+        </details>
+
+        <details class="border-b-2 border-charcoal group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-body font-black text-charcoal text-sm tracking-[0.1em] uppercase pr-4">Do kids have to sit still?</span>
+            <span class="font-mono font-black text-charcoal text-xl shrink-0">
+              <span class="faq-open">+</span>
+              <span class="faq-close">−</span>
+            </span>
+          </summary>
+          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">Absolutely not — movement is the whole point. This is an indoor picnic, not a recital. Kids can dance, wiggle, and explore freely. No shushing here.</p>
+        </details>
+
+        <details class="border-b-2 border-charcoal group">
+          <summary class="flex items-center justify-between py-5 cursor-pointer">
+            <span class="font-body font-black text-charcoal text-sm tracking-[0.1em] uppercase pr-4">What is the refund policy?</span>
+            <span class="font-mono font-black text-charcoal text-xl shrink-0">
+              <span class="faq-open">+</span>
+              <span class="faq-close">−</span>
+            </span>
+          </summary>
+          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">Tickets are non-refundable but fully transferable. Can't make it? Pass them along to someone who can. Reach out to <a href="mailto:neonnoteslv@gmail.com" class="text-mustard underline hover:text-charcoal transition-colors">neonnoteslv@gmail.com</a> and we'll help sort it out.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <!-- About Us / Our Story -->
-  <section id="our-story" class="bg-sand-grain pb-16">
+  <section id="our-story" class="bg-sand-grain pb-16 overflow-x-hidden">
 
     <!-- Typographic section header -->
     <div class="flex flex-col items-center pt-4 pb-12">
@@ -217,10 +337,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <!-- Cactus stamp — halfway off bottom-right corner -->
-        <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute -bottom-16 -right-14 w-36 pointer-events-none" />
+        <img src="/Cactus Large.png" alt="" aria-hidden="true" class="hidden md:block absolute -bottom-16 -right-14 w-36 pointer-events-none" />
 
       </div>
     </div>
+    </div>
+  </section>
+
+  <!-- Media Release -->
+  <section class="bg-charcoal border-t border-sand/10 py-8">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="font-mono text-sand/40 text-[0.7rem] leading-relaxed tracking-wide">
+        <span class="text-sand/60 font-bold uppercase tracking-widest">Photography &amp; Video Notice —</span> By attending this event, you acknowledge that Neon Notes may photograph and/or record video of attendees for use in promotional materials, social media, and marketing. If you have concerns, please notify a team member upon arrival or contact us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard hover:text-citron transition-colors">neonnoteslv@gmail.com</a> prior to the event.
+      </p>
     </div>
   </section>
 
