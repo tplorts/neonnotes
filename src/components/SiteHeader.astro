@@ -2,16 +2,27 @@
 
 ---
 
-<header class="bg-brand-dark border-b-2 border-brand-teal/30">
-  <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="/" class="shrink-0">
-      <img src="/logo.png" alt="Neon Notes — Live Music for Little Locals" class="h-16 w-auto" />
+<header class="bg-sand border-b-[3px] border-charcoal sticky top-0 z-50 overflow-visible">
+  <div class="max-w-4xl mx-auto px-6 py-2 flex items-center justify-between gap-6">
+
+    <!-- Logo as home button — overflows the frame intentionally -->
+    <a href="/" class="shrink-0 pl-2 relative z-10">
+      <img src="/logo.png" alt="Neon Notes — Live Music for Little Locals" class="h-[4.5rem] w-auto translate-y-1" />
     </a>
-    <nav>
-      <ul class="flex gap-6 font-display text-sm tracking-wide">
-        <li><a href="/" class="text-brand-cream hover:text-brand-teal transition-colors">Home</a></li>
-        <li><a href="/about" class="text-brand-cream hover:text-brand-teal transition-colors">About</a></li>
-      </ul>
-    </nav>
+
+    <!-- Nav + CTA -->
+    <div class="flex items-center gap-6">
+      <nav>
+        <ul class="flex gap-6 font-mono font-black text-xs tracking-[0.3em] uppercase">
+          <li><a href="#our-story" class="text-charcoal hover:text-teal transition-colors">Our Story</a></li>
+        </ul>
+      </nav>
+
+      <!-- Tickets button -->
+      <a href="#" class="font-mono font-black text-xs tracking-[0.3em] uppercase bg-mustard text-charcoal border-2 border-charcoal px-4 py-2 hover:bg-charcoal hover:text-mustard transition-colors whitespace-nowrap">
+        Tickets
+      </a>
+    </div>
+
   </div>
 </header>

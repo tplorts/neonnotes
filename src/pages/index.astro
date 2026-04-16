@@ -2,21 +2,226 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
+<style>
+  .hero-poster::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/Starburst.png');
+    background-size: 110px 110px;
+    background-repeat: repeat;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .story-drop-cap::first-letter {
+    initial-letter: 3;
+    color: #2b2b2b;
+    font-family: "Poiret One", system-ui, sans-serif;
+    padding-right: 0.3rem;
+  }
+</style>
+
 <BaseLayout title="Neon Notes">
-  <section class="text-center mb-16">
-    <h2 class="text-4xl text-brand-gold mb-4">Welcome</h2>
-    <p class="text-lg text-brand-cream/80 max-w-xl mx-auto">
-      TODO: short intro to the concert series for children.
-    </p>
+
+  <!-- Hero -->
+  <section class="hero-poster bg-charcoal py-12 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-10">
+
+      <!-- Text block -->
+      <div class="flex-1">
+        <div class="border-t-4 border-mustard mb-4"></div>
+        <h1 class="font-display tracking-widest uppercase leading-tight mb-3">
+          <span class="block text-3xl md:text-4xl text-mustard">A Space for</span>
+          <span class="block text-4xl md:text-5xl text-mustard">Little Listeners</span>
+        </h1>
+        <div class="border-t-2 border-mustard/50 mb-4"></div>
+        <p class="text-sand text-base leading-[1.9] mb-5">
+          Bringing the Las Vegas community together through high-quality live music — an intentional space for the next generation to experience the energy of a real performance.
+        </p>
+        <p class="text-[#5ecece] text-xl italic leading-relaxed tracking-[0.05em] mb-7">Where every little local has a front-row seat.</p>
+        <a href="#" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
+          Book a Spot
+        </a>
+      </div>
+
+      <!-- Image -->
+      <div class="flex-1">
+        <img src="/familyPicnic.png" alt="Families enjoying live music together" class="w-full" />
+      </div>
+
+    </div>
   </section>
 
-  <section>
-    <h2 class="text-2xl text-brand-teal mb-6 pb-2 border-b border-brand-teal/30">Upcoming Event</h2>
-    <article class="bg-brand-dark rounded-2xl p-6 border border-brand-teal/20">
-      <h3 class="text-xl text-brand-gold font-display mb-4">TODO: event name</h3>
-      <p class="mb-2"><span class="text-brand-coral font-semibold">Date:</span> TODO</p>
-      <p class="mb-4"><span class="text-brand-coral font-semibold">Venue:</span> TODO</p>
-      <p class="text-brand-cream/70">TODO: event description.</p>
-    </article>
+  <!-- Upcoming Event -->
+  <section class="bg-sand-grain">
+
+    <!-- Typographic section header -->
+    <div class="flex flex-col items-center py-12">
+      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+      <div class="flex items-center gap-5">
+        <div class="w-24 border-t-2 border-charcoal"></div>
+        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Upcoming Events</p>
+        <div class="w-24 border-t-2 border-charcoal"></div>
+      </div>
+    </div>
+
+    <div class="pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <article class="border-2 border-charcoal p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
+
+        <h3 class="text-5xl text-charcoal font-display mb-8">
+          <span class="decoration-4 decoration-mustard underline underline-offset-[10px]">The Debut Session: Live Jazz</span>
+        </h3>
+        <p class="text-charcoal text-lg mb-8">Join us for an intentional morning of live jazz music for the family.</p>
+
+        <div class="grid grid-cols-2 gap-3 mb-8">
+
+          <!-- The Vibe — Midnight Charcoal -->
+          <div class="relative overflow-hidden bg-charcoal border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
+            <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.10] pointer-events-none" />
+            <p class="font-mono font-black text-mustard text-[10px] tracking-[0.2em] uppercase relative z-10">The Vibe</p>
+            <p class="text-sand text-base font-light leading-relaxed relative z-10">A live jazz indoor picnic. No formal seating, no shushing — just room for little locals to experience the magic of a live performance.</p>
+          </div>
+
+          <!-- The Music — Terracotta Coral -->
+          <div class="relative overflow-hidden bg-coral border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
+            <img src="/Starburst.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
+            <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Music</p>
+            <p class="text-charcoal text-base font-light leading-relaxed relative z-10">A professional one-hour jazz set curated for families.</p>
+          </div>
+
+          <!-- The Setup — Pale Seafoam -->
+          <div class="relative overflow-hidden bg-seafoam border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
+            <img src="/Starburst.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
+            <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Setup</p>
+            <p class="text-charcoal text-base font-light leading-relaxed relative z-10">Grab a blanket from home, find a spot on the floor, and settle in.</p>
+          </div>
+
+          <!-- The Space — Neon Mustard -->
+          <div class="relative overflow-hidden bg-mustard border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
+            <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
+            <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Space</p>
+            <p class="text-charcoal text-base font-light leading-relaxed relative z-10">Movement is encouraged. Full AC, stroller parking, and free on-site parking provided.</p>
+          </div>
+
+        </div>
+
+        <!-- Notice Board Block -->
+        <div class="bg-charcoal border-2 border-mustard mb-8 p-8 md:p-10" style="box-shadow: 4px 4px 0px #2b2b2b;">
+
+          <p class="font-mono font-bold text-sand text-xs tracking-widest uppercase border-b border-mustard/30 pb-3 mb-6">— Notice —</p>
+
+          <div class="flex flex-col md:flex-row gap-8">
+
+            <!-- When & Where -->
+            <div class="flex-1">
+              <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">When &amp; Where</h4>
+              <p class="font-body font-black text-mustard text-5xl tracking-widest uppercase leading-none mb-5">Sunday<br/>May 24</p>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-2 text-sand">
+                  <span class="text-mustard font-bold mt-px">✦</span>
+                  <span>Doors open: 9:30 AM</span>
+                </li>
+                <li class="flex items-start gap-2 text-sand">
+                  <span class="text-mustard font-bold mt-px">✦</span>
+                  <span>Music starts: 10:00 AM</span>
+                </li>
+                <li class="flex items-start gap-2 text-sand">
+                  <span class="text-mustard font-bold mt-px">✦</span>
+                  <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Divider -->
+            <div class="hidden md:block w-px bg-mustard/20"></div>
+
+            <!-- Tickets -->
+            <div class="flex-1">
+              <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">Tickets</h4>
+              <ul class="space-y-0 text-sm w-full">
+                <li class="flex items-center border-b border-sand/10 py-2">
+                  <span class="text-mustard font-bold mr-2">✦</span>
+                  <span class="text-sand flex-1">Individual</span>
+                  <span class="font-mono font-black text-mustard text-base tabular-nums">$20</span>
+                </li>
+                <li class="flex items-center border-b border-sand/10 py-2">
+                  <span class="text-mustard font-bold mr-2">✦</span>
+                  <span class="text-sand flex-1">Trio Bundle <span class="text-sand text-xs">(3)</span></span>
+                  <span class="font-mono font-black text-mustard text-base tabular-nums">$54</span>
+                </li>
+                <li class="flex items-center border-b border-sand/10 py-2">
+                  <span class="text-mustard font-bold mr-2">✦</span>
+                  <span class="text-sand flex-1">Family Jam <span class="text-sand text-xs">(4)</span></span>
+                  <span class="font-mono font-black text-mustard text-base tabular-nums">$68</span>
+                </li>
+                <li class="flex items-center py-2">
+                  <span class="text-mustard font-bold mr-2">✦</span>
+                  <span class="text-sand flex-1">Little Locals under 2</span>
+                  <span class="font-mono font-black text-mustard text-base">Free</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Mission Note -->
+          <p class="text-sand text-[0.875rem] italic leading-relaxed border-t border-mustard/20 mt-8 pt-6">
+            <span class="text-mustard not-italic mr-1">♪</span>Each ticket directly supports our local musicians and helps us build a sustainable stage for live music in our community.
+          </p>
+
+        </div>
+
+        <a href="#" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
+          Secure Your Spot
+        </a>
+
+      </article>
+    </div>
+    </div>
   </section>
+
+  <!-- About Us / Our Story -->
+  <section id="our-story" class="bg-sand-grain pb-16">
+
+    <!-- Typographic section header -->
+    <div class="flex flex-col items-center pt-4 pb-12">
+      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+      <div class="flex items-center gap-5">
+        <div class="w-24 border-t-2 border-charcoal"></div>
+        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Our Story</p>
+        <div class="w-24 border-t-2 border-charcoal"></div>
+      </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Coral content block -->
+      <div class="bg-coral border-2 border-charcoal relative p-10 md:p-14" style="box-shadow: 8px 8px 0px #2b2b2b;">
+
+        <!-- Heading -->
+        <h2 class="font-body font-black text-charcoal text-sm tracking-[0.2em] uppercase border-b-2 border-charcoal/30 pb-4 mb-10">
+          Planting the Seeds of Live Music
+        </h2>
+
+        <!-- Body copy -->
+        <div class="space-y-5 text-charcoal leading-relaxed max-w-2xl">
+          <p class="story-drop-cap leading-relaxed">It all started with a look of pure unfiltered wonder. Watching our daughter experience live music for the first time, we saw how the rhythm caught her attention and the real instruments sparked a deep instinctual curiosity. In that moment, we knew we wanted her and every child in our city to experience that magic on a regular basis.</p>
+          <p>In the Entertainment Capital of the World, there is a surprising lack of accessible live music designed specifically for families. We realized that if we wanted the next generation to grow up with a genuine connection to the arts, we needed to build that space ourselves.</p>
+          <p>Early exposure to the arts does more than just entertain; it plants seeds. When we introduce our little locals to the energy of a live band and let them watch musicians pour their hearts into their instruments, we are showing them the beauty of human expression.</p>
+          <p class="font-semibold">Everyone in Las Vegas deserves to enjoy real live music, especially our little locals. They are our future, and Neon Notes is our dedicated space to introduce them to that beauty together.</p>
+          <p class="italic">We invite you to join us as we build this community.</p>
+        </div>
+
+        <!-- Cactus stamp — halfway off bottom-right corner -->
+        <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute -bottom-16 -right-14 w-36 pointer-events-none" />
+
+      </div>
+    </div>
+    </div>
+  </section>
+
 </BaseLayout>
