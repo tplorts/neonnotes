@@ -28,10 +28,36 @@
 
   body {
     @apply bg-charcoal text-sand font-body;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {
     @apply font-display;
+  }
+
+  /* Visible focus indicators for keyboard navigation */
+  :focus-visible {
+    outline: 3px solid #ffc82c;
+    outline-offset: 3px;
+  }
+
+  /* Skip to content link — visible only on focus */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 9999;
+    background: #ffc82c;
+    color: #2b2b2b;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2b2b2b;
+  }
+  .skip-link:focus {
+    top: 1rem;
   }
 }
 

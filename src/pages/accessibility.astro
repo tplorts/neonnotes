@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<style>
+  .legal-body {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+  .legal-body h2 {
+    font-family: "Roboto", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 0.5rem;
+  }
+  .legal-body p,
+  .legal-body li {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  .legal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .legal-body ul li::before {
+    content: "–";
+    color: #ffc82c;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+</style>
+
+<BaseLayout title="Accessibility — Neon Notes">
+  <section class="bg-sand-grain min-h-screen py-16">
+    <div class="max-w-2xl mx-auto px-6">
+
+      <!-- Logo -->
+      <div class="flex justify-center mb-8">
+        <a href="/">
+          <img src="/logo.png" alt="Neon Notes — Live Music for Little Locals" class="h-20 w-auto" />
+        </a>
+      </div>
+
+      <div class="bg-white border-2 border-charcoal p-8 md:p-12" style="box-shadow: 6px 6px 0px #2b2b2b;">
+
+        <!-- Page header -->
+        <div class="border-b-2 border-charcoal pb-6 mb-8">
+          <h1 class="font-display text-3xl text-charcoal mb-1">Accessibility Statement</h1>
+          <p class="text-xs text-charcoal/50" style="font-family: 'Roboto', sans-serif;">Last Updated: April 17, 2026</p>
+        </div>
+
+        <div class="legal-body space-y-8">
+
+          <p>At Neon Notes, we believe that music should be accessible to everyone — both in person and online. We are committed to ensuring that our digital experience is accessible to all families, including those with disabilities.</p>
+
+          <div>
+            <h2>1. Our Commitment</h2>
+            <p>We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. These guidelines explain how to make web content more accessible for people with visual, auditory, cognitive, and motor disabilities.</p>
+          </div>
+
+          <div>
+            <h2>2. Accessibility Features on Our Site</h2>
+            <p class="mb-3">To provide a soulful experience for every user, we have implemented features including:</p>
+            <ul>
+              <li><strong>High Contrast:</strong> Using our brand palette in a way that ensures text is readable against its background.</li>
+              <li><strong>Keyboard Navigation:</strong> Ensuring our ticket links and menus can be navigated without a mouse.</li>
+              <li><strong>Alt-Text:</strong> Providing descriptive text for our vintage-inspired illustrations and event images.</li>
+              <li><strong>Responsive Design:</strong> Ensuring our site works seamlessly across screen readers, tablets, and mobile devices.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>3. Ongoing Efforts</h2>
+            <p>Digital accessibility is an ongoing journey. We regularly review our site to ensure we are maintaining high standards as we add new "Debut Sessions" and event updates.</p>
+          </div>
+
+          <div>
+            <h2>4. Feedback &amp; Assistance</h2>
+            <p class="mb-3">We want your experience with Neon Notes to be effortless. If you are having difficulty viewing or navigating the content on this website, or notice any feature that you believe is not fully accessible, please reach out to us:</p>
+            <ul>
+              <li><strong>Email:</strong> <a href="mailto:neonnoteslv@gmail.com?subject=Accessibility" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a> (Please include "Accessibility" in the subject line).</li>
+            </ul>
+            <p class="mt-3">We value your feedback and will work to provide the information or transaction you seek through an alternate communication method if necessary.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-charcoal/10">
+          <a href="/" class="font-mono font-black text-xs tracking-[0.2em] uppercase text-charcoal hover:text-mustard transition-colors">← Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

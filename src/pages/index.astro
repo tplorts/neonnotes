@@ -64,11 +64,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <!-- Typographic section header -->
     <div class="flex flex-col items-center py-12">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
       <div class="flex items-center gap-5">
-        <div class="w-24 border-t-2 border-charcoal"></div>
+        <div class="w-12 border-t-2 border-charcoal"></div>
         <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Upcoming Events</p>
-        <div class="w-24 border-t-2 border-charcoal"></div>
+        <div class="w-12 border-t-2 border-charcoal"></div>
       </div>
     </div>
 
@@ -78,7 +78,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
 
         <!-- Age badge — overlaps top-right corner -->
-        <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);">
+        <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label="Best for ages 0 to 7" role="img">
           <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
             <polygon
               points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
@@ -89,9 +89,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </svg>
         </div>
 
-        <h3 class="text-3xl md:text-5xl text-charcoal font-display mb-8">
-          <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-[10px]">The Debut Session: Live Jazz</span>
-        </h3>
+        <h2 class="text-3xl md:text-5xl text-charcoal font-display mb-8">
+          <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-[10px]">The Debut Session:<br class="sm:hidden" /> Live Jazz</span>
+        </h2>
         <p class="text-charcoal text-lg mb-8">Join us for an intentional morning of live jazz music for the family.</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
@@ -107,7 +107,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div class="relative overflow-hidden bg-coral border-2 border-charcoal p-5 min-h-[160px] flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
             <img src="/Starburst.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
             <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Music</p>
-            <p class="text-charcoal text-base font-light leading-relaxed relative z-10">A professional one-hour jazz set curated for families.</p>
+            <p class="text-charcoal text-base font-semibold leading-relaxed relative z-10">A professional one-hour jazz set curated for families.</p>
           </div>
 
           <!-- The Setup — Pale Seafoam -->
@@ -167,12 +167,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </li>
                 <li class="flex items-center border-b border-sand/10 py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">The Trio</span>
+                  <span class="text-sand flex-1">The Trio <span class="text-sand/60 text-xs">(3 people)</span></span>
                   <span class="font-mono font-black text-mustard text-base tabular-nums">$54</span>
                 </li>
                 <li class="flex items-center border-b border-sand/10 py-2">
                   <span class="text-mustard font-bold mr-2">✦</span>
-                  <span class="text-sand flex-1">Family Jam</span>
+                  <span class="text-sand flex-1">Family Jam <span class="text-sand/60 text-xs">(4 people)</span></span>
                   <span class="font-mono font-black text-mustard text-base tabular-nums">$68</span>
                 </li>
                 <li class="flex items-center py-2">
@@ -240,15 +240,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
+                  <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
+                  <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-                  <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
+                  <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
                 </li>
               </ul>
             </div>
@@ -266,16 +266,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <!-- FAQ -->
-  <section class="bg-sand-grain py-16">
+  <section class="bg-sand-grain pb-16">
     <div class="max-w-4xl mx-auto px-6">
 
       <!-- Section header -->
-      <div class="flex flex-col items-center pb-12">
-        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+      <div class="flex flex-col items-center pt-6 pb-12">
+        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
         <div class="flex items-center gap-5">
-          <div class="w-24 border-t-2 border-charcoal"></div>
+          <div class="w-12 border-t-2 border-charcoal"></div>
           <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Common Questions</p>
-          <div class="w-24 border-t-2 border-charcoal"></div>
+          <div class="w-12 border-t-2 border-charcoal"></div>
         </div>
       </div>
 
@@ -323,12 +323,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section id="our-story" class="bg-sand-grain pb-16 overflow-x-hidden">
 
     <!-- Typographic section header -->
-    <div class="flex flex-col items-center pt-4 pb-12">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-10 h-10 mb-5" />
+    <div class="flex flex-col items-center pt-6 pb-12">
+      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
       <div class="flex items-center gap-5">
-        <div class="w-24 border-t-2 border-charcoal"></div>
+        <div class="w-12 border-t-2 border-charcoal"></div>
         <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Our Story</p>
-        <div class="w-24 border-t-2 border-charcoal"></div>
+        <div class="w-12 border-t-2 border-charcoal"></div>
       </div>
     </div>
 
@@ -344,7 +344,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <!-- Body copy -->
         <div class="space-y-5 text-charcoal leading-relaxed max-w-2xl">
-          <p class="story-drop-cap leading-relaxed">It all started with a look of pure unfiltered wonder. Watching our daughter experience live music for the first time, we saw how the rhythm caught her attention and the real instruments sparked a deep instinctual curiosity. In that moment, we knew we wanted her and every child in our city to experience that magic on a regular basis.</p>
+          <p class="leading-relaxed">It all started with a look of pure unfiltered wonder. Watching our daughter experience live music for the first time, we saw how the rhythm caught her attention and the real instruments sparked a deep instinctual curiosity. In that moment, we knew we wanted her and every child in our city to experience that magic on a regular basis.</p>
           <p>In the Entertainment Capital of the World, there is a surprising lack of accessible live music designed specifically for families. We realized that if we wanted the next generation to grow up with a genuine connection to the arts, we needed to build that space ourselves.</p>
           <p>Early exposure to the arts does more than just entertain; it plants seeds. When we introduce our little locals to the energy of a live band and let them watch musicians pour their hearts into their instruments, we are showing them the beauty of human expression.</p>
           <p class="font-semibold">Everyone in Las Vegas deserves to enjoy real live music, especially our little locals. They are our future, and Neon Notes is our dedicated space to introduce them to that beauty together.</p>
@@ -359,13 +359,5 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <!-- Media Release -->
-  <section class="bg-charcoal border-t border-sand/10 py-8">
-    <div class="max-w-4xl mx-auto px-6">
-      <p class="font-mono text-sand/40 text-[0.7rem] leading-relaxed tracking-wide">
-        <span class="text-sand/60 font-bold uppercase tracking-widest">Photography &amp; Video Notice —</span> By attending this event, you acknowledge that Neon Notes may photograph and/or record video of attendees for use in promotional materials, social media, and marketing. If you have concerns, please notify a team member upon arrival or contact us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard hover:text-citron transition-colors">neonnoteslv@gmail.com</a> prior to the event.
-      </p>
-    </div>
-  </section>
 
 </BaseLayout>

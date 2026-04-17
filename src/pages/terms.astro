@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<style>
+  .legal-body {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+  .legal-body h2 {
+    font-family: "Roboto", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 0.5rem;
+  }
+  .legal-body p,
+  .legal-body li {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #3a3a3a;
+  }
+  .legal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .legal-body ul li::before {
+    content: "–";
+    color: #ffc82c;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+</style>
+
+<BaseLayout title="Terms & Conditions — Neon Notes">
+  <section class="bg-sand-grain min-h-screen py-16">
+    <div class="max-w-2xl mx-auto px-6">
+
+      <!-- Logo -->
+      <div class="flex justify-center mb-8">
+        <a href="/">
+          <img src="/logo.png" alt="Neon Notes — Live Music for Little Locals" class="h-20 w-auto" />
+        </a>
+      </div>
+
+      <div class="bg-white border-2 border-charcoal p-8 md:p-12" style="box-shadow: 6px 6px 0px #2b2b2b;">
+
+        <!-- Page header -->
+        <div class="border-b-2 border-charcoal pb-6 mb-8">
+          <h1 class="font-display text-3xl text-charcoal mb-1">Terms &amp; Conditions</h1>
+          <p class="text-xs text-charcoal/50" style="font-family: 'Roboto', sans-serif;">Neon Notes Las Vegas | Effective Date: April 17, 2026</p>
+        </div>
+
+        <div class="legal-body space-y-8">
+
+          <p>Welcome to Neon Notes! By using our website, purchasing a ticket, or attending our events, you agree to the following Terms and Conditions. These terms ensure a safe, soulful, and musical environment for our "Little Locals" and their families.</p>
+
+          <div>
+            <h2>1. Ticketing &amp; Admission</h2>
+            <ul>
+              <li><strong>Pricing:</strong> All ticket prices are listed in USD. Tickets are required for all attendees over the age of 2. "Little Locals" under 2 are free but must be registered for capacity tracking.</li>
+              <li><strong>Capacity:</strong> Each session has a strictly enforced capacity. Admission is only guaranteed for valid ticket holders.</li>
+              <li><strong>Refunds &amp; Transfers:</strong> Tickets are non-refundable. However, they are fully transferable to another family for the same session date. Please notify us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a> if you are transferring your spot.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>2. Health &amp; Safety</h2>
+            <ul>
+              <li><strong>Supervision:</strong> Neon Notes is not a drop-off childcare service. Parents or guardians must remain with their children and provide active supervision at all times.</li>
+              <li><strong>Liability:</strong> Neon Notes and our venue partners are not responsible for personal injury or loss/damage of personal property during our events. By attending, you assume all risks related to participation.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>3. Media Release Clause</h2>
+            <p class="mb-3">By purchasing a ticket and entering a Neon Notes event, you acknowledge that photography, audio, and video recording may occur.</p>
+            <ul>
+              <li><strong>Consent:</strong> You grant Neon Notes the irrevocable right to use these images and recordings for promotional purposes, including our website, social media, and future marketing. This includes the likeness of any minors in your care.</li>
+              <li><strong>Our Privacy Commitment:</strong> We respect our community. If you would prefer a specific image of your family not be used, please reach out to us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a> or let our photographer know on-site. We are happy to accommodate!</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2>4. Website Use</h2>
+            <p>The content on this website, including logos, designs, and text, is the property of Neon Notes Las Vegas. You may not reproduce or use our branding for commercial purposes without written consent.</p>
+          </div>
+
+          <div>
+            <h2>5. Event Cancellations</h2>
+            <p>Neon Notes reserves the right to reschedule or cancel events due to unforeseen circumstances. In the event of a cancellation, ticket holders will be offered a full refund or credit toward a future session.</p>
+          </div>
+
+          <div>
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions regarding these terms, please contact us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a>.</p>
+          </div>
+
+          <!-- Closing note -->
+          <div class="border-t border-charcoal/10 pt-6">
+            <p class="italic text-charcoal/60"><span class="text-mustard not-italic">♪</span> Every paid ticket helps us support local musicians and keep the music live. Thank you for being part of our jam.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-charcoal/10">
+          <a href="/" class="font-mono font-black text-xs tracking-[0.2em] uppercase text-charcoal hover:text-mustard transition-colors">← Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
