@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { ageRangeText, ageRangeLabel } from "../config";
 ---
 
 <style>
@@ -78,14 +79,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
 
         <!-- Age badge — overlaps top-right corner -->
-        <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label="Best for ages 0 to 7" role="img">
+        <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label={`Best for ages ${ageRangeLabel}`} role="img">
           <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
             <polygon
               points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
               fill="#FFC82C" stroke="#2b2b2b" stroke-width="3"
             />
             <text x="60" y="51" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="13" fill="#2b2b2b" letter-spacing="2">AGES</text>
-            <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">0–7</text>
+            <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">{ageRangeText}</text>
           </svg>
         </div>
 
@@ -148,7 +149,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </li>
                 <li class="flex items-start gap-2 text-sand">
                   <span class="text-mustard font-bold mt-px">✦</span>
-                  <span class="font-black tracking-widest uppercase text-xs">Best for Ages 0–7</span>
+                  <span class="font-black tracking-widest uppercase text-xs">Best for Ages {ageRangeText}</span>
                 </li>
               </ul>
             </div>
@@ -179,7 +180,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                   <span class="text-mustard font-bold mr-2">✦</span>
                   <span class="text-sand flex-1">
                     Little Locals Under 2
-                    <span class="block text-sand/50 text-[10px] font-light normal-case tracking-normal italic">This session curated for ages 0–7</span>
+                    <span class="block text-sand/50 text-[10px] font-light normal-case tracking-normal italic">This session curated for ages {ageRangeText}</span>
                   </span>
                   <span class="font-mono font-black text-mustard text-base">Free!</span>
                 </li>
