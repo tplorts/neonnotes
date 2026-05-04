@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { ageRangeText, ageRangeLabel } from "../config";
+import { ageRangeText, ageRangeLabel, EVENTBRITE_URL } from "../config";
 ---
 
 <style>
@@ -47,7 +47,7 @@ import { ageRangeText, ageRangeLabel } from "../config";
           Bringing the Las Vegas community together through high-quality live music — an intentional space for the next generation to experience the energy of a real performance.
         </p>
         <p class="text-seafoam font-semibold text-xl italic leading-relaxed tracking-[0.05em] mb-7">Where every little local has a front-row seat.</p>
-        <a href="https://www.eventbrite.com/e/neon-notes-live-jazz-music-for-little-locals-ages-0-7-tickets-1987475100527?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
+        <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
           Book a Spot
         </a>
       </div>
@@ -257,7 +257,7 @@ import { ageRangeText, ageRangeLabel } from "../config";
           </div>
         </div>
 
-        <a href="https://www.eventbrite.com/e/neon-notes-live-jazz-music-for-little-locals-ages-0-7-tickets-1987475100527?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
+        <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
           Secure Your Spot
         </a>
 
