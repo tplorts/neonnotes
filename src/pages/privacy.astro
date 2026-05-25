@@ -1,134 +1,75 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import LegalLayout from "../layouts/LegalLayout.astro";
 import { ageRangeText } from "../config";
 ---
 
-<style>
-  .legal-body {
-    font-family: "Roboto", system-ui, sans-serif;
-  }
-  .legal-body h2 {
-    font-family: "Roboto", system-ui, sans-serif;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #2b2b2b;
-    margin-bottom: 0.5rem;
-  }
-  .legal-body p,
-  .legal-body li {
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: #3a3a3a;
-  }
-  .legal-body ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-  .legal-body ul li::before {
-    content: "–";
-    color: #ffc82c;
-    font-weight: 700;
-    margin-right: 0.5rem;
-  }
-</style>
+<LegalLayout
+  title="Privacy Policy — Neon Notes"
+  heading="Privacy Policy"
+  meta="Effective Date: April 17, 2026"
+>
 
-<BaseLayout title="Privacy Policy — Neon Notes">
-  <section class="bg-sand-grain min-h-screen py-16">
-    <div class="max-w-2xl mx-auto px-6">
+  <p>At Neon Notes, we are committed to protecting the privacy of our "Little Locals" and their families. This policy explains how we collect, use, and safeguard your information when you visit our website or purchase tickets to our events.</p>
 
-      <!-- Logo -->
-      <div class="flex justify-center mb-8">
-        <a href="/">
-          <img src="/logo.png" alt="Neon Notes — Live Music for Little Locals" class="h-20 w-auto" />
-        </a>
-      </div>
+  <div>
+    <h2>1. Information We Collect</h2>
+    <p class="mb-3">We only collect information that is necessary to provide you with a great event experience. This includes:</p>
+    <ul>
+      <li><strong>Personal Identifiers:</strong> Name, email address, and phone number (collected when you sign up for our newsletter or purchase tickets).</li>
+      <li><strong>Transaction Data:</strong> We use third-party processors (like Eventbrite) to handle ticket sales. We do not store your credit card or full financial details on our servers.</li>
+      <li><strong>Usage Data:</strong> Standard information about how you use our site, such as your IP address, browser type, and pages visited, via cookies.</li>
+    </ul>
+  </div>
 
-      <div class="bg-white border-2 border-charcoal p-8 md:p-12" style="box-shadow: 6px 6px 0px #2b2b2b;">
+  <div>
+    <h2>2. How We Use Your Information</h2>
+    <p class="mb-3">Your data helps us keep the music playing! We use it to:</p>
+    <ul>
+      <li>Send you ticket confirmations and event updates.</li>
+      <li>Keep you in the loop about future Neon Notes sessions (if you've opted in).</li>
+      <li>Improve our website and community offerings.</li>
+    </ul>
+  </div>
 
-        <!-- Page header -->
-        <div class="border-b-2 border-charcoal pb-6 mb-8">
-          <h1 class="font-display text-3xl text-charcoal mb-1">Privacy Policy</h1>
-          <p class="text-xs text-charcoal/50" style="font-family: 'Roboto', sans-serif;">Effective Date: April 17, 2026</p>
-        </div>
+  <div>
+    <h2>3. Third-Party Sharing</h2>
+    <p class="mb-3">We don't sell your data — ever. We only share information with trusted partners who help us run our events, such as:</p>
+    <ul>
+      <li><strong>Eventbrite:</strong> To manage ticketing and registration.</li>
+      <li><strong>Email Platforms:</strong> To send out our newsletters and announcements.</li>
+    </ul>
+  </div>
 
-        <div class="legal-body space-y-8">
+  <div>
+    <h2>4. Media & Photography</h2>
+    <p>As noted in our Media Release, we occasionally capture photos and videos at our events for promotional use. We are committed to your family's comfort; if you would like a specific image of your family removed from our digital platforms, please reach out to us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a>.</p>
+  </div>
 
-          <p>At Neon Notes, we are committed to protecting the privacy of our "Little Locals" and their families. This policy explains how we collect, use, and safeguard your information when you visit our website or purchase tickets to our events.</p>
+  <div>
+    <h2>5. Cookies</h2>
+    <p>We use "cookies" to enhance your browsing experience. You can choose to disable cookies through your browser settings, though some features of the site may not function perfectly without them.</p>
+  </div>
 
-          <div>
-            <h2>1. Information We Collect</h2>
-            <p class="mb-3">We only collect information that is necessary to provide you with a great event experience. This includes:</p>
-            <ul>
-              <li><strong>Personal Identifiers:</strong> Name, email address, and phone number (collected when you sign up for our newsletter or purchase tickets).</li>
-              <li><strong>Transaction Data:</strong> We use third-party processors (like Eventbrite) to handle ticket sales. We do not store your credit card or full financial details on our servers.</li>
-              <li><strong>Usage Data:</strong> Standard information about how you use our site, such as your IP address, browser type, and pages visited, via cookies.</li>
-            </ul>
-          </div>
+  <div>
+    <h2>6. Children's Privacy</h2>
+    <p>While our events are curated for ages {ageRangeText}, our website is intended for parents and guardians. We do not knowingly collect personal information directly from children.</p>
+  </div>
 
-          <div>
-            <h2>2. How We Use Your Information</h2>
-            <p class="mb-3">Your data helps us keep the music playing! We use it to:</p>
-            <ul>
-              <li>Send you ticket confirmations and event updates.</li>
-              <li>Keep you in the loop about future Neon Notes sessions (if you've opted in).</li>
-              <li>Improve our website and community offerings.</li>
-            </ul>
-          </div>
+  <div>
+    <h2>7. Your Rights</h2>
+    <p class="mb-3">You have the right to:</p>
+    <ul>
+      <li>Ask us what data we have about you.</li>
+      <li>Request that we delete your personal information.</li>
+      <li>Opt out of marketing emails at any time by clicking "Unsubscribe."</li>
+    </ul>
+  </div>
 
-          <div>
-            <h2>3. Third-Party Sharing</h2>
-            <p class="mb-3">We don't sell your data — ever. We only share information with trusted partners who help us run our events, such as:</p>
-            <ul>
-              <li><strong>Eventbrite:</strong> To manage ticketing and registration.</li>
-              <li><strong>Email Platforms:</strong> To send out our newsletters and announcements.</li>
-            </ul>
-          </div>
+  <div>
+    <h2>8. Contact Us</h2>
+    <p>If you have any questions about this policy or how we handle your data, please contact us:<br/>
+    <strong>Neon Notes Las Vegas</strong><br/>
+    Email: <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a></p>
+  </div>
 
-          <div>
-            <h2>4. Media & Photography</h2>
-            <p>As noted in our Media Release, we occasionally capture photos and videos at our events for promotional use. We are committed to your family's comfort; if you would like a specific image of your family removed from our digital platforms, please reach out to us at <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a>.</p>
-          </div>
-
-          <div>
-            <h2>5. Cookies</h2>
-            <p>We use "cookies" to enhance your browsing experience. You can choose to disable cookies through your browser settings, though some features of the site may not function perfectly without them.</p>
-          </div>
-
-          <div>
-            <h2>6. Children's Privacy</h2>
-            <p>While our events are curated for ages {ageRangeText}, our website is intended for parents and guardians. We do not knowingly collect personal information directly from children.</p>
-          </div>
-
-          <div>
-            <h2>7. Your Rights</h2>
-            <p class="mb-3">You have the right to:</p>
-            <ul>
-              <li>Ask us what data we have about you.</li>
-              <li>Request that we delete your personal information.</li>
-              <li>Opt out of marketing emails at any time by clicking "Unsubscribe."</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2>8. Contact Us</h2>
-            <p>If you have any questions about this policy or how we handle your data, please contact us:<br/>
-            <strong>Neon Notes Las Vegas</strong><br/>
-            Email: <a href="mailto:neonnoteslv@gmail.com" class="text-mustard font-medium hover:underline">neonnoteslv@gmail.com</a></p>
-          </div>
-
-        </div>
-
-        <div class="mt-10 pt-6 border-t border-charcoal/10">
-          <a href="/" class="font-mono font-black text-xs tracking-[0.2em] uppercase text-charcoal hover:text-mustard transition-colors">← Back to Home</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+</LegalLayout>
