@@ -1,0 +1,25 @@
+---
+interface Props {
+  question: string;
+}
+
+const { question } = Astro.props;
+---
+
+<style>
+  details .faq-close { display: none; }
+  details[open] .faq-open { display: none; }
+  details[open] .faq-close { display: inline; }
+  details summary::-webkit-details-marker { display: none; }
+</style>
+
+<details class="border-b-2 border-charcoal group">
+  <summary class="flex items-center justify-between py-5 cursor-pointer">
+    <span class="font-body font-black text-charcoal text-sm tracking-widest uppercase pr-4">{question}</span>
+    <span class="font-mono font-black text-charcoal text-xl shrink-0">
+      <span class="faq-open">+</span>
+      <span class="faq-close">−</span>
+    </span>
+  </summary>
+  <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl"><slot /></p>
+</details>

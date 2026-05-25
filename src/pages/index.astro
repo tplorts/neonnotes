@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import FaqItem from "../components/FaqItem.astro";
 import { EVENTBRITE_URL } from "../config";
 import { classifyEvents } from "../data/events";
 
@@ -23,11 +24,6 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
     pointer-events: none;
     z-index: 0;
   }
-
-  details .faq-close { display: none; }
-  details[open] .faq-open { display: none; }
-  details[open] .faq-close { display: inline; }
-  details summary::-webkit-details-marker { display: none; }
 
   .story-drop-cap::first-letter {
     initial-letter: 3;
@@ -113,38 +109,17 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
       <!-- FAQ Items -->
       <div class="border-t-2 border-charcoal">
 
-        <details class="border-b-2 border-charcoal group">
-          <summary class="flex items-center justify-between py-5 cursor-pointer">
-            <span class="font-body font-black text-charcoal text-sm tracking-widest uppercase pr-4">Will the music be too loud for little ears?</span>
-            <span class="font-mono font-black text-charcoal text-xl shrink-0">
-              <span class="faq-open">+</span>
-              <span class="faq-close">−</span>
-            </span>
-          </summary>
-          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">We work closely with our musicians to keep the volume at a family-friendly level. That said, we always recommend bringing ear protection for very young babies — better safe than sorry.</p>
-        </details>
+        <FaqItem question="Will the music be too loud for little ears?">
+          We work closely with our musicians to keep the volume at a family-friendly level. That said, we always recommend bringing ear protection for very young babies — better safe than sorry.
+        </FaqItem>
 
-        <details class="border-b-2 border-charcoal group">
-          <summary class="flex items-center justify-between py-5 cursor-pointer">
-            <span class="font-body font-black text-charcoal text-sm tracking-widest uppercase pr-4">Do kids have to sit still?</span>
-            <span class="font-mono font-black text-charcoal text-xl shrink-0">
-              <span class="faq-open">+</span>
-              <span class="faq-close">−</span>
-            </span>
-          </summary>
-          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">Absolutely not — movement is the whole point. This is an indoor picnic, not a recital. Kids can dance, wiggle, and explore freely. No shushing here.</p>
-        </details>
+        <FaqItem question="Do kids have to sit still?">
+          Absolutely not — movement is the whole point. This is an indoor picnic, not a recital. Kids can dance, wiggle, and explore freely. No shushing here.
+        </FaqItem>
 
-        <details class="border-b-2 border-charcoal group">
-          <summary class="flex items-center justify-between py-5 cursor-pointer">
-            <span class="font-body font-black text-charcoal text-sm tracking-widest uppercase pr-4">What is the refund policy?</span>
-            <span class="font-mono font-black text-charcoal text-xl shrink-0">
-              <span class="faq-open">+</span>
-              <span class="faq-close">−</span>
-            </span>
-          </summary>
-          <p class="text-charcoal text-sm leading-relaxed pb-6 max-w-2xl">Tickets are non-refundable but fully transferable. Can't make it? Pass them along to someone who can. Reach out to <a href="mailto:neonnoteslv@gmail.com" class="text-mustard underline hover:text-charcoal transition-colors">neonnoteslv@gmail.com</a> and we'll help sort it out.</p>
-        </details>
+        <FaqItem question="What is the refund policy?">
+          Tickets are non-refundable but fully transferable. Can't make it? Pass them along to someone who can. Reach out to <a href="mailto:neonnoteslv@gmail.com" class="text-mustard underline hover:text-charcoal transition-colors">neonnoteslv@gmail.com</a> and we'll help sort it out.
+        </FaqItem>
 
       </div>
     </div>
