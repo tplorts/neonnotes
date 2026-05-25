@@ -1,0 +1,29 @@
+---
+interface Props {
+  label: string;
+  // When true, renders the centered variant topped by a starburst with
+  // symmetric dividers. When false, renders the inline left-aligned variant
+  // whose right divider stretches to fill the row.
+  starburst?: boolean;
+  class?: string;
+}
+
+const { label, starburst = false, class: className = "" } = Astro.props;
+---
+
+{starburst ? (
+  <div class:list={["flex flex-col items-center", className]}>
+    <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
+    <div class="flex items-center gap-5">
+      <div class="w-12 border-t-2 border-charcoal"></div>
+      <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">{label}</p>
+      <div class="w-12 border-t-2 border-charcoal"></div>
+    </div>
+  </div>
+) : (
+  <div class:list={["flex items-center gap-5", className]}>
+    <div class="w-12 border-t-2 border-charcoal"></div>
+    <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">{label}</p>
+    <div class="flex-1 border-t-2 border-charcoal"></div>
+  </div>
+)}

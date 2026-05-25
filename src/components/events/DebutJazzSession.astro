@@ -1,5 +1,6 @@
 ---
 import { ageRangeText, ageRangeLabel, EVENTBRITE_URL } from "../../config";
+import SectionHeader from "../SectionHeader.astro";
 ---
 
 <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
@@ -124,11 +125,7 @@ import { ageRangeText, ageRangeLabel, EVENTBRITE_URL } from "../../config";
 
   <!-- Know Before You Go -->
   <div class="mb-8">
-    <div class="flex items-center gap-5 mb-5">
-      <div class="w-12 border-t-2 border-charcoal"></div>
-      <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Know Before You Go</p>
-      <div class="flex-1 border-t-2 border-charcoal"></div>
-    </div>
+    <SectionHeader label="Know Before You Go" class="mb-5" />
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
       <!-- The Arrival — Mustard -->

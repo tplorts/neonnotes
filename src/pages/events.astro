@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 import { classifyEvents } from "../data/events";
 
 const { upcoming, past } = classifyEvents();
@@ -25,14 +26,7 @@ const { upcoming, past } = classifyEvents();
   <section class="bg-sand-grain">
 
     <!-- Typographic section header -->
-    <div class="flex flex-col items-center py-12">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
-      <div class="flex items-center gap-5">
-        <div class="w-12 border-t-2 border-charcoal"></div>
-        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Upcoming Sessions</p>
-        <div class="w-12 border-t-2 border-charcoal"></div>
-      </div>
-    </div>
+    <SectionHeader label="Upcoming Sessions" starburst class="py-12" />
 
     <div class="pb-12">
       <div class="max-w-4xl mx-auto px-6 space-y-16">
@@ -57,14 +51,7 @@ const { upcoming, past } = classifyEvents();
     <section class="bg-sand-grain pb-16">
 
       <!-- Typographic section header -->
-      <div class="flex flex-col items-center pt-6 pb-12">
-        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
-        <div class="flex items-center gap-5">
-          <div class="w-12 border-t-2 border-charcoal"></div>
-          <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Past Sessions</p>
-          <div class="w-12 border-t-2 border-charcoal"></div>
-        </div>
-      </div>
+      <SectionHeader label="Past Sessions" starburst class="pt-6 pb-12" />
 
       <div class="max-w-4xl mx-auto px-6 space-y-16">
         {past.map((event) => (

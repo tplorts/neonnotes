@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FaqItem from "../components/FaqItem.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 import { EVENTBRITE_URL } from "../config";
 import { classifyEvents } from "../data/events";
 
@@ -68,14 +69,7 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
   <section class="bg-sand-grain">
 
     <!-- Typographic section header -->
-    <div class="flex flex-col items-center py-12">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
-      <div class="flex items-center gap-5">
-        <div class="w-12 border-t-2 border-charcoal"></div>
-        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">{sectionLabel}</p>
-        <div class="w-12 border-t-2 border-charcoal"></div>
-      </div>
-    </div>
+    <SectionHeader label={sectionLabel} starburst class="py-12" />
 
     <div class="pb-12">
     <div class="max-w-4xl mx-auto px-6 space-y-16">
@@ -97,14 +91,7 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
     <div class="max-w-4xl mx-auto px-6">
 
       <!-- Section header -->
-      <div class="flex flex-col items-center pt-6 pb-12">
-        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
-        <div class="flex items-center gap-5">
-          <div class="w-12 border-t-2 border-charcoal"></div>
-          <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Common Questions</p>
-          <div class="w-12 border-t-2 border-charcoal"></div>
-        </div>
-      </div>
+      <SectionHeader label="Common Questions" starburst class="pt-6 pb-12" />
 
       <!-- FAQ Items -->
       <div class="border-t-2 border-charcoal">
@@ -129,14 +116,7 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
   <section id="our-story" class="bg-sand-grain pb-16 overflow-x-hidden">
 
     <!-- Typographic section header -->
-    <div class="flex flex-col items-center pt-6 pb-12">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
-      <div class="flex items-center gap-5">
-        <div class="w-12 border-t-2 border-charcoal"></div>
-        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Our Story</p>
-        <div class="w-12 border-t-2 border-charcoal"></div>
-      </div>
-    </div>
+    <SectionHeader label="Our Story" starburst class="pt-6 pb-12" />
 
     <div class="max-w-4xl mx-auto px-6">
 
