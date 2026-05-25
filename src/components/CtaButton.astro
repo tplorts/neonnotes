@@ -1,0 +1,29 @@
+---
+import { EVENTBRITE_URL } from "../config";
+
+interface Props {
+  href?: string;
+  // "sm" is the lighter hero treatment; "lg" is the bolder, shadowed
+  // call-to-action used on event cards.
+  size?: "sm" | "lg";
+}
+
+const { href = EVENTBRITE_URL, size = "lg" } = Astro.props;
+
+const sizeClasses =
+  size === "lg" ? "font-black px-10 py-4" : "font-bold px-8 py-3";
+const style = size === "lg" ? "box-shadow: 6px 6px 0px #2b2b2b;" : undefined;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[
+    "inline-block bg-mustard text-charcoal font-body tracking-widest uppercase text-sm border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all",
+    sizeClasses,
+  ]}
+  style={style}
+>
+  <slot />
+</a>

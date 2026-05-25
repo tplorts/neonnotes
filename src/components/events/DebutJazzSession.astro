@@ -1,6 +1,7 @@
 ---
-import { ageRangeText, ageRangeLabel, EVENTBRITE_URL } from "../../config";
+import { ageRangeText, ageRangeLabel } from "../../config";
 import SectionHeader from "../SectionHeader.astro";
+import CtaButton from "../CtaButton.astro";
 ---
 
 <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
@@ -180,8 +181,6 @@ import SectionHeader from "../SectionHeader.astro";
     </div>
   </div>
 
-  <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-black tracking-widest uppercase text-sm px-10 py-4 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all" style="box-shadow: 6px 6px 0px #2b2b2b;">
-    Secure Your Spot
-  </a>
+  <CtaButton size="lg">Secure Your Spot</CtaButton>
 
 </article>

@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import FaqItem from "../components/FaqItem.astro";
 import SectionHeader from "../components/SectionHeader.astro";
-import { EVENTBRITE_URL } from "../config";
+import CtaButton from "../components/CtaButton.astro";
 import { classifyEvents } from "../data/events";
 
 const { upcoming, past } = classifyEvents();
@@ -52,9 +52,7 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
           Bringing the Las Vegas community together through high-quality live music — an intentional space for the next generation to experience the energy of a real performance.
         </p>
         <p class="text-seafoam font-semibold text-xl italic leading-relaxed tracking-wider mb-7">Where every little local has a front-row seat.</p>
-        <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="inline-block bg-mustard text-charcoal font-body font-bold tracking-widest uppercase text-sm px-8 py-3 border-2 border-charcoal hover:bg-charcoal hover:text-mustard hover:-translate-y-0.5 transition-all">
-          Book a Spot
-        </a>
+        <CtaButton size="sm">Book a Spot</CtaButton>
       </div>
 
       <!-- Image -->
