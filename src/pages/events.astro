@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { classifyEvents } from "../data/events";
+
+const { upcoming, past } = classifyEvents();
+---
+
+<BaseLayout title="Events — Neon Notes">
+
+  <!-- Page header -->
+  <section class="bg-charcoal py-12 md:py-16 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10">
+      <div class="border-t-4 border-mustard mb-4"></div>
+      <h1 class="font-display tracking-widest uppercase leading-tight mb-3 text-4xl md:text-5xl text-mustard">
+        Events
+      </h1>
+      <div class="border-t-2 border-mustard/50 mb-4"></div>
+      <p class="text-sand text-base leading-[1.9] max-w-2xl">
+        Every Neon Notes session is a live, family-friendly performance for our little locals. Here's what's coming up — and a look back at where we've played.
+      </p>
+    </div>
+  </section>
+
+  <!-- Upcoming -->
+  <section class="bg-sand-grain">
+
+    <!-- Typographic section header -->
+    <div class="flex flex-col items-center py-12">
+      <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
+      <div class="flex items-center gap-5">
+        <div class="w-12 border-t-2 border-charcoal"></div>
+        <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Upcoming Sessions</p>
+        <div class="w-12 border-t-2 border-charcoal"></div>
+      </div>
+    </div>
+
+    <div class="pb-12">
+      <div class="max-w-4xl mx-auto px-6 space-y-16">
+
+        {upcoming.map((event) => <event.Component />)}
+
+        {upcoming.length === 0 && (
+          <div class="border-2 border-charcoal border-dashed p-10 text-center">
+            <p class="font-display text-2xl text-charcoal mb-3">More music on the way</p>
+            <p class="text-charcoal/70 text-sm max-w-md mx-auto">
+              We're tuning up the next session. Follow <a href="https://instagram.com/neonnoteslv" target="_blank" rel="noopener noreferrer" class="underline decoration-mustard decoration-2 underline-offset-4 hover:text-charcoal">@neonnoteslv</a> to be the first to know when tickets drop.
+            </p>
+          </div>
+        )}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Past -->
+  {past.length > 0 && (
+    <section class="bg-sand-grain pb-16">
+
+      <!-- Typographic section header -->
+      <div class="flex flex-col items-center pt-6 pb-12">
+        <img src="/Starburst.png" alt="" aria-hidden="true" class="w-16 h-16 mb-5" />
+        <div class="flex items-center gap-5">
+          <div class="w-12 border-t-2 border-charcoal"></div>
+          <p class="font-body font-black text-xs tracking-[0.3em] uppercase text-charcoal whitespace-nowrap">Past Sessions</p>
+          <div class="w-12 border-t-2 border-charcoal"></div>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto px-6 space-y-16">
+        {past.map((event) => (
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase bg-mustard border-2 border-charcoal px-3 py-1">This session has wrapped</span>
+              <div class="flex-1 border-t-2 border-charcoal/30"></div>
+            </div>
+            <event.Component />
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+</BaseLayout>
