@@ -11,10 +11,14 @@ const { title, heading, meta } = Astro.props;
 ---
 
 <style>
+  /* Body content arrives via <slot> from the page, so it carries the page's
+     scope hash rather than this layout's. Mark the descendant selectors
+     :global() so they match the slotted elements; the .legal-body anchor stays
+     scoped to this layout. */
   .legal-body {
     font-family: "Roboto", system-ui, sans-serif;
   }
-  .legal-body h2 {
+  .legal-body :global(h2) {
     font-family: "Roboto", system-ui, sans-serif;
     font-weight: 700;
     font-size: 0.8rem;
@@ -23,13 +27,13 @@ const { title, heading, meta } = Astro.props;
     color: #2b2b2b;
     margin-bottom: 0.5rem;
   }
-  .legal-body p,
-  .legal-body li {
+  .legal-body :global(p),
+  .legal-body :global(li) {
     font-size: 0.9rem;
     line-height: 1.8;
     color: #3a3a3a;
   }
-  .legal-body ul {
+  .legal-body :global(ul) {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -37,7 +41,7 @@ const { title, heading, meta } = Astro.props;
     flex-direction: column;
     gap: 0.4rem;
   }
-  .legal-body ul li::before {
+  .legal-body :global(ul li)::before {
     content: "–";
     color: #ffc82c;
     font-weight: 700;
