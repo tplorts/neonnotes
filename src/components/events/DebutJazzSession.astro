@@ -2,6 +2,8 @@
 import { ageRangeText, ageRangeLabel } from "../../config";
 import SectionHeader from "../SectionHeader.astro";
 import CtaButton from "../CtaButton.astro";
+import InfoCard from "../InfoCard.astro";
+import Bullet from "../Bullet.astro";
 ---
 
 <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
@@ -25,33 +27,21 @@ import CtaButton from "../CtaButton.astro";
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
 
-    <!-- The Vibe — Midnight Charcoal -->
-    <div class="relative overflow-hidden bg-charcoal border-2 border-charcoal p-5 min-h-40 flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
-      <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.10] pointer-events-none" />
-      <p class="font-mono font-black text-mustard text-[10px] tracking-[0.2em] uppercase relative z-10">The Vibe</p>
-      <p class="text-sand text-base font-light leading-relaxed relative z-10">A live jazz indoor picnic. No formal seating, no shushing — just room for little locals to experience the magic of a live performance.</p>
-    </div>
+    <InfoCard bg="bg-charcoal" tone="dark" label="The Vibe" image="/Cactus Large.png" imageOpacity={0.1} class="min-h-40">
+      <p class="text-sand text-base font-light leading-relaxed">A live jazz indoor picnic. No formal seating, no shushing — just room for little locals to experience the magic of a live performance.</p>
+    </InfoCard>
 
-    <!-- The Music — Terracotta Coral -->
-    <div class="relative overflow-hidden bg-coral border-2 border-charcoal p-5 min-h-40 flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
-      <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Music</p>
-      <p class="text-charcoal text-base font-semibold leading-relaxed relative z-10">A professional one-hour jazz set curated for families.</p>
-    </div>
+    <InfoCard bg="bg-coral" label="The Music" image="/Starburst.png" class="min-h-40">
+      <p class="text-charcoal text-base font-semibold leading-relaxed">A professional one-hour jazz set curated for families.</p>
+    </InfoCard>
 
-    <!-- The Setup — Pale Seafoam -->
-    <div class="relative overflow-hidden bg-seafoam border-2 border-charcoal p-5 min-h-40 flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
-      <img src="/Starburst.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
-      <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Setup</p>
-      <p class="text-charcoal text-base font-light leading-relaxed relative z-10">Grab a blanket from home, find a spot on the floor, and settle in.</p>
-    </div>
+    <InfoCard bg="bg-seafoam" label="The Setup" image="/Starburst.png" class="min-h-40">
+      <p class="text-charcoal text-base font-light leading-relaxed">Grab a blanket from home, find a spot on the floor, and settle in.</p>
+    </InfoCard>
 
-    <!-- The Space — Neon Mustard -->
-    <div class="relative overflow-hidden bg-mustard border-2 border-charcoal p-5 min-h-40 flex flex-col gap-3" style="box-shadow: 4px 4px 0px #2b2b2b;">
-      <img src="/Cactus Large.png" alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 opacity-[0.12] pointer-events-none" />
-      <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase relative z-10">The Space</p>
-      <p class="text-charcoal text-base font-light leading-relaxed relative z-10">Movement is encouraged. Full AC, stroller parking, and free on-site parking provided.</p>
-    </div>
+    <InfoCard bg="bg-mustard" label="The Space" image="/Cactus Large.png" class="min-h-40">
+      <p class="text-charcoal text-base font-light leading-relaxed">Movement is encouraged. Full AC, stroller parking, and free on-site parking provided.</p>
+    </InfoCard>
 
   </div>
 
@@ -67,18 +57,15 @@ import CtaButton from "../CtaButton.astro";
         <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">When &amp; Where</h4>
         <p class="font-body font-black text-mustard text-5xl tracking-widest uppercase leading-none mb-5">Sunday<br/>May 24</p>
         <ul class="space-y-2 text-sm">
-          <li class="flex items-start gap-2 text-sand">
-            <span class="text-mustard font-bold mt-px">✦</span>
+          <Bullet tone="dark">
             <span>10:00 AM – 11:00 AM <span class="text-sand/60 italic">(Showtime)</span></span>
-          </li>
-          <li class="flex items-start gap-2 text-sand">
-            <span class="text-mustard font-bold mt-px">✦</span>
+          </Bullet>
+          <Bullet tone="dark">
             <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
-          </li>
-          <li class="flex items-start gap-2 text-sand">
-            <span class="text-mustard font-bold mt-px">✦</span>
+          </Bullet>
+          <Bullet tone="dark">
             <span class="font-black tracking-widest uppercase text-xs">Best for Ages {ageRangeText}</span>
-          </li>
+          </Bullet>
         </ul>
       </div>
 
@@ -129,54 +116,41 @@ import CtaButton from "../CtaButton.astro";
     <SectionHeader label="Know Before You Go" class="mb-5" />
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
-      <!-- The Arrival — Mustard -->
-      <div class="bg-mustard border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
-        <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">Arrival &amp; Timing</p>
+      <InfoCard bg="bg-mustard" label="Arrival & Timing">
         <ul class="space-y-2">
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> Arrive early to settle in and grab a drink.</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">10:00 – 11:00 AM | Showtime:</span> A one-hour live jazz set.</span>
-          </li>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> Arrive early to settle in and grab a drink.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">10:00 – 11:00 AM | Showtime:</span> A one-hour live jazz set.</span>
+          </Bullet>
         </ul>
-      </div>
+      </InfoCard>
 
-      <!-- The Setup — Seafoam -->
-      <div class="bg-seafoam border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
-        <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">The Setup</p>
+      <InfoCard bg="bg-seafoam" label="The Setup">
         <ul class="space-y-2">
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Bring a Blanket:</span> We've cleared the floor for dancing. Please bring a cozy blanket for your picnic spot.</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-light leading-relaxed"><span class="font-black">Food &amp; Drink:</span> Feel free to bring your own snacks. A local vendor <span class="italic">(TBA)</span> will also have treats and beverages for purchase.</span>
-          </li>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Bring a Blanket:</span> We've cleared the floor for dancing. Please bring a cozy blanket for your picnic spot.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Food &amp; Drink:</span> Feel free to bring your own snacks. A local vendor <span class="italic">(TBA)</span> will also have treats and beverages for purchase.</span>
+          </Bullet>
         </ul>
-      </div>
+      </InfoCard>
 
-      <!-- The Comfort — Coral -->
-      <div class="bg-coral border-2 border-charcoal p-5 flex flex-col gap-3 text-left" style="box-shadow: 4px 4px 0px #2b2b2b;">
-        <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase">The Comfort</p>
+      <InfoCard bg="bg-coral" label="The Comfort">
         <ul class="space-y-2">
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="text-charcoal font-bold mt-px shrink-0">✦</span>
-            <span class="text-charcoal text-sm font-semibold leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
-          </li>
+          <Bullet>
+            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
+          </Bullet>
         </ul>
-      </div>
+      </InfoCard>
 
     </div>
   </div>

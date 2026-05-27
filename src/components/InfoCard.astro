@@ -1,0 +1,49 @@
+---
+interface Props {
+  // Background color utility, e.g. "bg-charcoal", "bg-coral".
+  bg: string;
+  // Eyebrow / kicker text shown above the slotted body.
+  label: string;
+  // "dark" = dark background → mustard eyebrow; "light" = charcoal eyebrow.
+  tone?: "light" | "dark";
+  // Optional decorative background image (centered, faint, non-interactive).
+  image?: string;
+  // Opacity for the decorative image, 0–1.
+  imageOpacity?: number;
+  class?: string;
+}
+
+const {
+  bg,
+  label,
+  tone = "light",
+  image,
+  imageOpacity = 0.12,
+  class: className = "",
+} = Astro.props;
+
+const eyebrowColor = tone === "dark" ? "text-mustard" : "text-charcoal";
+---
+
+<div
+  class:list={[
+    "relative overflow-hidden border-2 border-charcoal p-5 flex flex-col",
+    bg,
+    className,
+  ]}
+  style="box-shadow: 4px 4px 0px #2b2b2b;"
+>
+  {image && (
+    <img
+      src={image}
+      alt=""
+      aria-hidden="true"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 pointer-events-none"
+      style={`opacity: ${imageOpacity};`}
+    />
+  )}
+  <div class="relative z-10 flex flex-col gap-3">
+    <p class:list={["font-mono font-black text-[10px] tracking-[0.2em] uppercase", eyebrowColor]}>{label}</p>
+    <slot />
+  </div>
+</div>

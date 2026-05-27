@@ -1,0 +1,17 @@
+---
+interface Props {
+  // "dark" = on a dark background → sand text with a mustard marker;
+  // "light" = on a light background → charcoal text and marker.
+  tone?: "light" | "dark";
+}
+
+const { tone = "light" } = Astro.props;
+
+const textColor = tone === "dark" ? "text-sand" : "text-charcoal";
+const markerColor = tone === "dark" ? "text-mustard" : "text-charcoal";
+---
+
+<li class:list={["flex items-start gap-2", textColor]}>
+  <span class:list={["font-bold mt-px shrink-0", markerColor]}>✦</span>
+  <slot />
+</li>
