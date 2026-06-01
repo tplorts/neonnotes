@@ -1,5 +1,6 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 import DebutJazzSession from "../components/events/DebutJazzSession.astro";
+import FamilyFunkadelic from "../components/events/FamilyFunkadelic.astro";
 
 export interface NeonEvent {
   /** URL-friendly identifier, also used as a stable list key. */
@@ -23,6 +24,12 @@ export const events: NeonEvent[] = [
     title: "The Debut Session: Live Jazz",
     date: "2026-05-24",
     Component: DebutJazzSession,
+  },
+  {
+    slug: "family-funkadelic",
+    title: "The Family Funkadelic: Live Disco Funk",
+    date: "2026-07-19",
+    Component: FamilyFunkadelic,
   },
 ];
 

@@ -1,0 +1,223 @@
+---
+import { ageRangeText, ageRangeLabel } from "../../config";
+import SectionHeader from "../SectionHeader.astro";
+import CtaButton from "../CtaButton.astro";
+import InfoCard from "../InfoCard.astro";
+import Bullet from "../Bullet.astro";
+---
+
+<article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
+
+  <!-- Age badge — overlaps top-right corner -->
+  <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label={`Best for ages ${ageRangeLabel}`} role="img">
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <polygon
+        points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
+        fill="#FFC82C" stroke="#2b2b2b" stroke-width="3"
+      />
+      <text x="60" y="51" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="13" fill="#2b2b2b" letter-spacing="2">AGES</text>
+      <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">{ageRangeText}</text>
+    </svg>
+  </div>
+
+  <div class="flex items-start gap-4 mb-8 pr-20 md:pr-24">
+    <!-- Disco ball: tile grid clipped to circle, hanging wire, mustard glint tiles + light rays -->
+    <svg viewBox="0 0 56 68" xmlns="http://www.w3.org/2000/svg" class="w-10 h-12 md:w-14 md:h-16 shrink-0 mt-0 md:mt-1" aria-hidden="true">
+      <defs>
+        <pattern id="disco-tiles" x="4" y="12" width="8" height="6" patternUnits="userSpaceOnUse">
+          <rect x="0.5" y="0.5" width="7" height="5" fill="#c8b48a" stroke="#2b2b2b" stroke-width="0.75"/>
+        </pattern>
+        <clipPath id="disco-clip">
+          <circle cx="28" cy="38" r="24"/>
+        </clipPath>
+      </defs>
+      <!-- hanging wire -->
+      <line x1="28" y1="0" x2="28" y2="14" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round"/>
+      <!-- ball shadow -->
+      <circle cx="30" cy="40" r="24" fill="#2b2b2b" opacity="0.12"/>
+      <!-- ball base -->
+      <circle cx="28" cy="38" r="24" fill="#c8b48a"/>
+      <!-- tile grid -->
+      <rect x="4" y="14" width="48" height="48" fill="url(#disco-tiles)" clip-path="url(#disco-clip)"/>
+      <!-- mustard glint tiles -->
+      <g clip-path="url(#disco-clip)">
+        <rect x="12.5" y="18.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="28.5" y="12.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="36.5" y="24.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="20.5" y="30.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="12.5" y="42.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="36.5" y="42.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+        <rect x="20.5" y="54.5" width="7" height="5" fill="#FFC82C" stroke="#2b2b2b" stroke-width="0.75"/>
+      </g>
+      <!-- ball outline -->
+      <circle cx="28" cy="38" r="24" fill="none" stroke="#2b2b2b" stroke-width="2"/>
+      <!-- light rays off glint tiles -->
+      <line x1="13" y1="20" x2="5"  y2="13" stroke="#FFC82C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="32" y1="14" x2="35" y2="6"  stroke="#FFC82C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="40" y1="27" x2="49" y2="21" stroke="#FFC82C" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="13" y1="45" x2="4"  y2="48" stroke="#FFC82C" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <h2 class="text-2xl md:text-4xl text-charcoal font-display">
+      <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-8">The Family Funkadelic:<br class="sm:hidden" /> Live Disco Funk</span>
+    </h2>
+  </div>
+  <p class="text-charcoal text-lg mb-8">Neon Notes presents an indoor live disco picnic! Be ready for live music, dancing, and family fun.</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+
+    <InfoCard bg="bg-charcoal" tone="dark" label="The Music" class="min-h-40">
+      <p class="text-mustard text-base font-black leading-relaxed mb-3">We are bringing the funk!</p>
+      <p class="text-sand text-base font-light leading-relaxed mb-3">7 musicians taking the stage: Keys, Bass, Trumpet, Sax, Drums, Guitar, and Strings.</p>
+      <p class="text-mustard text-base font-black tracking-widest uppercase">Featuring: The Noir Movement</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-charcoal" tone="dark" label="The Vibe" class="min-h-40">
+      <p class="text-sand text-base font-light leading-relaxed">Expect live disco funk music, a vibrant atmosphere, and an open floor to show off your best moves. An amazing opportunity to introduce your littles to live instruments in an environment designed entirely for them.</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-seafoam" label="The Setup" class="min-h-40">
+      <p class="text-charcoal text-base font-light leading-relaxed">Indoor picnic style — grab a blanket from home, claim your spot on the floor, and get ready to move.</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-coral" label="The Space" class="min-h-40">
+      <p class="text-charcoal text-base font-light leading-relaxed">Movement is encouraged. Full AC, stroller parking, and free on-site parking provided.</p>
+    </InfoCard>
+
+  </div>
+
+  <!-- Diamond strip divider -->
+  <div class="flex items-center gap-0 mb-8 overflow-hidden" aria-hidden="true">
+    <div class="flex-1 border-t-2 border-charcoal/20"></div>
+    {Array.from({ length: 18 }).map((_, i) => (
+      <svg viewBox="0 0 12 12" class="w-4 h-4 shrink-0" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="6,1 11,6 6,11 1,6" fill={i % 2 === 0 ? "#FFC82C" : "none"} stroke="#2b2b2b" stroke-width="1.5"/>
+      </svg>
+    ))}
+    <div class="flex-1 border-t-2 border-charcoal/20"></div>
+  </div>
+
+  <!-- Notice Board Block -->
+  <div class="bg-charcoal border-2 border-mustard mb-8 p-8 md:p-10" style="box-shadow: 4px 4px 0px #2b2b2b;">
+
+    <p class="font-mono font-bold text-sand text-xs tracking-widest uppercase border-b border-mustard/30 pb-3 mb-6">— Notice —</p>
+
+    <div class="flex flex-col md:flex-row gap-8">
+
+      <!-- When & Where -->
+      <div class="flex-1">
+        <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">When &amp; Where</h4>
+        <p class="font-body font-black text-mustard text-5xl tracking-widest uppercase leading-none mb-5">Sunday<br/>July 19</p>
+        <ul class="space-y-2 text-sm">
+          <Bullet tone="dark">
+            <span>10:00 AM – 11:15 AM <span class="text-sand/60 italic">(Showtime)</span></span>
+          </Bullet>
+          <Bullet tone="dark">
+            <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
+          </Bullet>
+          <Bullet tone="dark">
+            <span class="font-black tracking-widest uppercase text-xs">Best for Ages {ageRangeText}</span>
+          </Bullet>
+        </ul>
+      </div>
+
+      <!-- Divider -->
+      <div class="hidden md:block w-px bg-mustard/20"></div>
+
+      <!-- Tickets -->
+      <div class="flex-1">
+        <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">Tickets</h4>
+        <ul class="space-y-0 text-sm w-full">
+          <li class="flex items-center border-b border-sand/10 py-2">
+            <span class="text-mustard font-bold mr-2">✦</span>
+            <span class="text-sand flex-1">The Soloist</span>
+            <span class="font-mono font-black text-mustard text-base tabular-nums">$24</span>
+          </li>
+          <li class="flex items-center border-b border-sand/10 py-2">
+            <span class="text-mustard font-bold mr-2">✦</span>
+            <span class="text-sand flex-1">The Trio <span class="text-sand/60 text-xs">(3 people)</span></span>
+            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$66</span><span class="block text-sand/50 text-[10px] font-light italic">saves $6</span></span>
+          </li>
+          <li class="flex items-center border-b border-sand/10 py-2">
+            <span class="text-mustard font-bold mr-2">✦</span>
+            <span class="text-sand flex-1">Family Jam <span class="text-sand/60 text-xs">(4 people)</span></span>
+            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$80</span><span class="block text-sand/50 text-[10px] font-light italic">saves $16</span></span>
+          </li>
+          <li class="flex items-center py-2">
+            <span class="text-mustard font-bold mr-2">✦</span>
+            <span class="text-sand flex-1">
+              Little Locals Under 2
+              <span class="block text-sand/50 text-[10px] font-light normal-case tracking-normal italic">This session curated for ages {ageRangeText}</span>
+            </span>
+            <span class="font-mono font-black text-mustard text-base">Free!</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Mission Note -->
+    <p class="text-sand text-[0.875rem] italic leading-relaxed border-t border-mustard/20 mt-8 pt-6">
+      <span class="text-mustard not-italic mr-1">♪</span>Each ticket directly supports our local musicians and helps us build a sustainable stage for live music in our community.
+    </p>
+
+  </div>
+
+  <!-- Know Before You Go -->
+  <div class="mb-8">
+    <SectionHeader label="Know Before You Go" class="mb-5" />
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
+
+      <InfoCard bg="bg-mustard" label="Arrival & Timing">
+        <ul class="space-y-2">
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> 30 minutes prior to the disco. Arrive early to settle in.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">10:00 AM | Showtime:</span> 1 hour 15 minutes of live disco funk.</span>
+          </Bullet>
+        </ul>
+      </InfoCard>
+
+      <InfoCard bg="bg-seafoam" label="The Setup (Indoor Picnic Style)">
+        <ul class="space-y-2">
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Bring a Blanket:</span> We've cleared the floor to create an open space for movement. Bring a blanket to claim your picnic spot.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Seating:</span> Benches and chairs will be spread throughout the room if needed. Camping chairs are welcomed!</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Food &amp; Drink:</span> Feel free to bring your own snacks and water. Free water bottles available if needed.</span>
+          </Bullet>
+        </ul>
+      </InfoCard>
+
+      <InfoCard bg="bg-coral" label="Venue Comforts">
+        <ul class="space-y-2">
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
+          </Bullet>
+          <Bullet>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
+          </Bullet>
+        </ul>
+      </InfoCard>
+
+    </div>
+
+    <!-- Allergy Notice -->
+    <div class="border-2 border-charcoal/30 border-dashed p-6">
+      <p class="font-mono font-black text-charcoal text-[10px] tracking-[0.2em] uppercase mb-3">A Note on Snacks &amp; Allergies</p>
+      <p class="text-charcoal/80 text-sm leading-relaxed mb-2">
+        We welcome you to bring snacks to keep your little ones happy! Please be mindful that while we encourage a peanut-aware environment, this event is <span class="font-semibold">not a peanut-free or allergen-free zone</span>. Little Locals does not monitor or enforce snack contents, and we cannot guarantee that peanuts or other allergens will not be present in the venue.
+      </p>
+      <p class="text-charcoal/80 text-sm leading-relaxed">
+        We kindly ask all families to be cautious of those around them, but ultimately, parents and guardians are responsible for managing their child's food sensitivities and safety.
+      </p>
+    </div>
+
+  </div>
+
+  <CtaButton size="lg">Secure Your Spot</CtaButton>
+
+</article>
