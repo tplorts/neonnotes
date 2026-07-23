@@ -1,156 +1,74 @@
 ---
-import { ageRangeText, ageRangeLabel } from "../../config";
-import SectionHeader from "../SectionHeader.astro";
 import InfoCard from "../InfoCard.astro";
-import Bullet from "../Bullet.astro";
+import CtaButton from "../CtaButton.astro";
 ---
 
 <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
 
-  <!-- Age badge — overlaps top-right corner -->
-  <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label={`Best for ages ${ageRangeLabel}`} role="img">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-      <polygon
-        points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
-        fill="#FFC82C" stroke="#2b2b2b" stroke-width="3"
-      />
-      <text x="60" y="51" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="13" fill="#2b2b2b" letter-spacing="2">AGES</text>
-      <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">{ageRangeText}</text>
-    </svg>
+  <!-- Recap eyebrow -->
+  <div class="flex items-center gap-3 mb-4">
+    <span class="font-mono font-black text-charcoal text-[10px] tracking-[0.25em] uppercase bg-mustard border-2 border-charcoal px-3 py-1 -rotate-2">★ The Recap ★</span>
+    <span class="font-mono font-bold text-charcoal/60 text-[10px] tracking-[0.2em] uppercase">Sunday, May 24</span>
   </div>
 
-  <h2 class="text-3xl md:text-5xl text-charcoal font-display mb-8">
+  <h2 class="text-3xl md:text-5xl text-charcoal font-display mb-6">
     <span class="decoration-4 decoration-mustard underline underline-offset-4 md:underline-offset-10">The Debut Session:<br class="sm:hidden" /> Live Jazz</span>
   </h2>
-  <p class="text-charcoal text-lg mb-8">Join us for an intentional morning of live jazz music for the family.</p>
+  <p class="text-charcoal text-lg leading-relaxed mb-8">
+    Our very first session, and what a way to start. Blankets on the floor, little feet finding the beat, and an hour of live jazz filling the room. No shushing, no stiff seats — just our little locals soaking up their first live show. Here's a peek at the magic. 🎷
+  </p>
 
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-
-    <InfoCard bg="bg-charcoal" tone="dark" label="The Vibe" image="/Cactus Large.png" imageOpacity={0.1} class="min-h-40">
-      <p class="text-sand text-base font-light leading-relaxed">A live jazz indoor picnic. No formal seating, no shushing — just room for little locals to experience the magic of a live performance.</p>
-    </InfoCard>
-
-    <InfoCard bg="bg-coral" label="The Music" image="/Starburst.png" class="min-h-40">
-      <p class="text-charcoal text-base font-semibold leading-relaxed">A professional one-hour jazz set curated for families.</p>
-    </InfoCard>
-
-    <InfoCard bg="bg-seafoam" label="The Setup" image="/Starburst.png" class="min-h-40">
-      <p class="text-charcoal text-base font-light leading-relaxed">Grab a blanket from home, find a spot on the floor, and settle in.</p>
-    </InfoCard>
-
-    <InfoCard bg="bg-mustard" label="The Space" image="/Cactus Large.png" class="min-h-40">
-      <p class="text-charcoal text-base font-light leading-relaxed">Movement is encouraged. Full AC, stroller parking, and free on-site parking provided.</p>
-    </InfoCard>
-
-  </div>
-
-  <!-- Notice Board Block -->
-  <div class="bg-charcoal border-2 border-mustard mb-8 p-8 md:p-10" style="box-shadow: 4px 4px 0px #2b2b2b;">
-
-    <p class="font-mono font-bold text-sand text-xs tracking-widest uppercase border-b border-mustard/30 pb-3 mb-6">— Notice —</p>
-
-    <div class="flex flex-col md:flex-row gap-8">
-
-      <!-- When & Where -->
-      <div class="flex-1">
-        <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">When &amp; Where</h4>
-        <p class="font-body font-black text-mustard text-5xl tracking-widest uppercase leading-none mb-5">Sunday<br/>May 24</p>
-        <ul class="space-y-2 text-sm">
-          <Bullet tone="dark">
-            <span>10:00 AM – 11:00 AM <span class="text-sand/60 italic">(Showtime)</span></span>
-          </Bullet>
-          <Bullet tone="dark">
-            <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
-          </Bullet>
-          <Bullet tone="dark">
-            <span class="font-black tracking-widest uppercase text-xs">Best for Ages {ageRangeText}</span>
-          </Bullet>
-        </ul>
-      </div>
-
-      <!-- Divider -->
-      <div class="hidden md:block w-px bg-mustard/20"></div>
-
-      <!-- Tickets -->
-      <div class="flex-1">
-        <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">Tickets</h4>
-        <ul class="space-y-0 text-sm w-full">
-          <li class="flex items-center border-b border-sand/10 py-2">
-            <span class="text-mustard font-bold mr-2">✦</span>
-            <span class="text-sand flex-1">Individual</span>
-            <span class="font-mono font-black text-mustard text-base tabular-nums">$15</span>
-          </li>
-          <li class="flex items-center border-b border-sand/10 py-2">
-            <span class="text-mustard font-bold mr-2">✦</span>
-            <span class="text-sand flex-1">The Trio <span class="text-sand/60 text-xs">(3 people)</span></span>
-            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$42</span><span class="block text-sand/50 text-[10px] font-light italic">$14/ticket</span></span>
-          </li>
-          <li class="flex items-center border-b border-sand/10 py-2">
-            <span class="text-mustard font-bold mr-2">✦</span>
-            <span class="text-sand flex-1">Family Jam <span class="text-sand/60 text-xs">(4 people)</span></span>
-            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$52</span><span class="block text-sand/50 text-[10px] font-light italic">$13/ticket</span></span>
-          </li>
-          <li class="flex items-center py-2">
-            <span class="text-mustard font-bold mr-2">✦</span>
-            <span class="text-sand flex-1">
-              Little Locals Under 2
-              <span class="block text-sand/50 text-[10px] font-light normal-case tracking-normal italic">This session curated for ages {ageRangeText}</span>
-            </span>
-            <span class="font-mono font-black text-mustard text-base">Free!</span>
-          </li>
-        </ul>
-      </div>
-
+  <!-- Video -->
+  <figure class="mb-8">
+    <div class="border-2 border-charcoal bg-charcoal overflow-hidden" style="box-shadow: 6px 6px 0px #2b2b2b;">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        poster="/videos/neonnotes-jazz-debut-poster.jpg"
+        class="w-full h-auto block max-h-[70vh] mx-auto"
+      >
+        <source src="/videos/neonnotes-jazz-debut.mp4" type="video/mp4" />
+        Your browser can't play this video — but trust us, it was a good one.
+      </video>
     </div>
+    <figcaption class="font-mono font-bold text-charcoal/60 text-[10px] tracking-[0.2em] uppercase mt-3 text-center">
+      ♪ Moments from our debut — Millennium Dance Complex, Las Vegas
+    </figcaption>
+  </figure>
 
-    <!-- Mission Note -->
-    <p class="text-sand text-[0.875rem] italic leading-relaxed border-t border-mustard/20 mt-8 pt-6">
-      <span class="text-mustard not-italic mr-1">♪</span>Each ticket directly supports our local musicians and helps us build a sustainable stage for live music in our community.
-    </p>
+  <!-- By the numbers -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+
+    <InfoCard bg="bg-mustard" label="The Set" class="items-center text-center">
+      <p class="font-display text-4xl text-charcoal leading-none">60</p>
+      <p class="text-charcoal text-xs font-semibold leading-snug">minutes of live jazz</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-coral" label="Dance Floor" class="items-center text-center">
+      <p class="font-display text-4xl text-charcoal leading-none">100%</p>
+      <p class="text-charcoal text-xs font-semibold leading-snug">open for wiggles</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-seafoam" label="Shushing" class="items-center text-center">
+      <p class="font-display text-4xl text-charcoal leading-none">0</p>
+      <p class="text-charcoal text-xs font-semibold leading-snug">times, not once</p>
+    </InfoCard>
+
+    <InfoCard bg="bg-charcoal" tone="dark" label="Little Locals" class="items-center text-center">
+      <p class="font-display text-4xl text-mustard leading-none">∞</p>
+      <p class="text-sand text-xs font-light leading-snug">memories made</p>
+    </InfoCard>
 
   </div>
 
-  <!-- Know Before You Go -->
-  <div class="mb-8">
-    <SectionHeader label="Know Before You Go" class="mb-5" />
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-
-      <InfoCard bg="bg-mustard" label="Arrival & Timing">
-        <ul class="space-y-2">
-          <Bullet>
-            <span class="text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> Arrive early to settle in and grab a drink.</span>
-          </Bullet>
-          <Bullet>
-            <span class="text-sm font-light leading-relaxed"><span class="font-black">10:00 – 11:00 AM | Showtime:</span> A one-hour live jazz set.</span>
-          </Bullet>
-        </ul>
-      </InfoCard>
-
-      <InfoCard bg="bg-seafoam" label="The Setup">
-        <ul class="space-y-2">
-          <Bullet>
-            <span class="text-sm font-light leading-relaxed"><span class="font-black">Bring a Blanket:</span> We've cleared the floor for dancing. Please bring a cozy blanket for your picnic spot.</span>
-          </Bullet>
-          <Bullet>
-            <span class="text-sm font-light leading-relaxed"><span class="font-black">Food &amp; Drink:</span> Feel free to bring your own snacks. A local vendor <span class="italic">(TBA)</span> will also have treats and beverages for purchase.</span>
-          </Bullet>
-        </ul>
-      </InfoCard>
-
-      <InfoCard bg="bg-coral" label="The Comfort">
-        <ul class="space-y-2">
-          <Bullet>
-            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Stay Cool:</span> Full indoor AC to beat the Las Vegas heat.</span>
-          </Bullet>
-          <Bullet>
-            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Parking:</span> Plenty of free parking available on-site.</span>
-          </Bullet>
-          <Bullet>
-            <span class="text-sm font-semibold leading-relaxed"><span class="font-black">Strollers:</span> Designated Stroller Parking area near the entrance.</span>
-          </Bullet>
-        </ul>
-      </InfoCard>
-
+  <!-- Closing note -->
+  <div class="bg-charcoal border-2 border-mustard p-6 md:p-8 flex flex-col sm:flex-row sm:items-center gap-5" style="box-shadow: 4px 4px 0px #2b2b2b;">
+    <p class="text-sand text-base leading-relaxed flex-1">
+      <span class="text-mustard font-black">Thank you for dancing with us.</span> This was just the first note — the next session is already in the works.
+    </p>
+    <div class="shrink-0">
+      <CtaButton size="lg">See What's Next</CtaButton>
     </div>
   </div>
 

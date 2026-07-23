@@ -1,5 +1,4 @@
 ---
-import { ageRangeText, ageRangeLabel } from "../../config";
 import SectionHeader from "../SectionHeader.astro";
 import CtaButton from "../CtaButton.astro";
 import InfoCard from "../InfoCard.astro";
@@ -8,19 +7,7 @@ import Bullet from "../Bullet.astro";
 
 <article class="relative border-2 border-charcoal p-5 md:p-8" style="box-shadow: 6px 6px 0px #2b2b2b;">
 
-  <!-- Age badge — overlaps top-right corner -->
-  <div class="absolute -top-7 -right-4 md:-top-8 md:-right-6 w-24 h-24 md:w-28 md:h-28 rotate-[8deg] z-10" style="filter: drop-shadow(3px 3px 0px #2b2b2b);" aria-label={`Best for ages ${ageRangeLabel}`} role="img">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-      <polygon
-        points="60,5 70.87,19.43 87.5,12.37 89.7,30.3 107.63,32.5 100.57,49.13 115,60 100.57,70.87 107.63,87.5 89.7,89.7 87.5,107.63 70.87,100.57 60,115 49.13,100.57 32.5,107.63 30.3,89.7 12.37,87.5 19.43,70.87 5,60 19.43,49.13 12.37,32.5 30.3,30.3 32.5,12.37 49.13,19.43"
-        fill="#FFC82C" stroke="#2b2b2b" stroke-width="3"
-      />
-      <text x="60" y="51" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="13" fill="#2b2b2b" letter-spacing="2">AGES</text>
-      <text x="60" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="900" font-size="17" fill="#2b2b2b" letter-spacing="1">{ageRangeText}</text>
-    </svg>
-  </div>
-
-  <div class="flex items-start gap-4 mb-8 pr-20 md:pr-24">
+  <div class="flex items-start gap-4 mb-8">
     <!-- Disco ball: tile grid clipped to circle, hanging wire, mustard glint tiles + light rays -->
     <svg viewBox="0 0 56 68" xmlns="http://www.w3.org/2000/svg" class="w-10 h-12 md:w-14 md:h-16 shrink-0 mt-0 md:mt-1" aria-hidden="true">
       <defs>
@@ -106,17 +93,13 @@ import Bullet from "../Bullet.astro";
       <!-- When & Where -->
       <div class="flex-1">
         <h4 class="font-mono font-black text-sand text-[10px] tracking-[0.2em] uppercase mb-4">When &amp; Where</h4>
-        <p class="font-body font-black text-mustard text-5xl tracking-widest uppercase leading-none mb-3">Mid<br/>Sept</p>
-        <p class="font-mono font-bold text-sand/70 text-xs tracking-[0.25em] uppercase mb-5">Exact date — TBD</p>
+        <p class="font-body font-black text-mustard text-4xl md:text-5xl tracking-widest uppercase leading-none mb-5">Sunday<br/>Sep 20</p>
         <ul class="space-y-2 text-sm">
           <Bullet tone="dark">
-            <span>10:00 AM – 11:15 AM <span class="text-sand/60 italic">(Showtime)</span></span>
+            <span>10:00 AM – 11:00 AM <span class="text-sand/60 italic">(Showtime)</span></span>
           </Bullet>
           <Bullet tone="dark">
             <span>Millennium Dance Complex Las Vegas<br/>6675 S Tenaya Way Suite 120<br/>Las Vegas, NV 89113</span>
-          </Bullet>
-          <Bullet tone="dark">
-            <span class="font-black tracking-widest uppercase text-xs">Best for Ages {ageRangeText}</span>
           </Bullet>
         </ul>
       </div>
@@ -131,17 +114,17 @@ import Bullet from "../Bullet.astro";
           <li class="flex items-center border-b border-sand/10 py-2">
             <span class="text-mustard font-bold mr-2">✦</span>
             <span class="text-sand flex-1">The Soloist</span>
-            <span class="font-mono font-black text-mustard text-base tabular-nums">$24</span>
+            <span class="font-mono font-black text-mustard text-base tabular-nums">$20</span>
           </li>
           <li class="flex items-center border-b border-sand/10 py-2">
             <span class="text-mustard font-bold mr-2">✦</span>
             <span class="text-sand flex-1">The Trio <span class="text-sand/60 text-xs">(3 people)</span></span>
-            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$66</span><span class="block text-sand/50 text-[10px] font-light italic">saves $6</span></span>
+            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$54</span><span class="block text-sand/50 text-[10px] font-light italic">$18/ticket</span></span>
           </li>
           <li class="flex items-center border-b border-sand/10 py-2">
             <span class="text-mustard font-bold mr-2">✦</span>
             <span class="text-sand flex-1">Family Jam <span class="text-sand/60 text-xs">(4 people)</span></span>
-            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$80</span><span class="block text-sand/50 text-[10px] font-light italic">saves $16</span></span>
+            <span class="text-right"><span class="font-mono font-black text-mustard text-base tabular-nums">$68</span><span class="block text-sand/50 text-[10px] font-light italic">$17/ticket</span></span>
           </li>
           <li class="flex items-center py-2">
             <span class="text-mustard font-bold mr-2">✦</span>
@@ -171,7 +154,7 @@ import Bullet from "../Bullet.astro";
             <span class="text-sm font-light leading-relaxed"><span class="font-black">9:30 AM | Doors Open:</span> 30 minutes prior to the disco. Arrive early to settle in.</span>
           </Bullet>
           <Bullet>
-            <span class="text-sm font-light leading-relaxed"><span class="font-black">10:00 AM | Showtime:</span> 1 hour 15 minutes of live disco funk.</span>
+            <span class="text-sm font-light leading-relaxed"><span class="font-black">10:00 AM | Showtime:</span> 1 hour of live disco funk.</span>
           </Bullet>
         </ul>
       </InfoCard>

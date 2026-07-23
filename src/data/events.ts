@@ -28,9 +28,8 @@ export const events: NeonEvent[] = [
   {
     slug: "family-funkadelic",
     title: "The Family Funkadelic: Live Disco Funk",
-    // Rescheduled from July 19 to mid-September; exact date TBD.
-    // Placeholder keeps it sorted as upcoming — update once confirmed.
-    date: "2026-09-15",
+    // Rescheduled from July 19 to Sunday, September 20, 2026.
+    date: "2026-09-20",
     Component: FamilyFunkadelic,
   },
 ];
