@@ -4,6 +4,7 @@ import FaqItem from "../components/FaqItem.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import CtaButton from "../components/CtaButton.astro";
 import { classifyEvents } from "../data/events";
+import { TICKETS_URL } from "../config";
 
 const { upcoming, past } = classifyEvents();
 // Feature upcoming sessions; if none are on the calendar, fall back to the most
@@ -52,7 +53,7 @@ const sectionLabel = hasUpcoming ? "Upcoming Events" : "Recent Session";
           Bringing the Las Vegas community together through high-quality live music — an intentional space for the next generation to experience the energy of a real performance.
         </p>
         <p class="text-seafoam font-semibold text-xl italic leading-relaxed tracking-wider mb-7">Where every little local has a front-row seat.</p>
-        <CtaButton size="sm">Book a Spot</CtaButton>
+        <CtaButton size="sm">{TICKETS_URL ? "Book a Spot" : "Follow for Dates"}</CtaButton>
       </div>
 
       <!-- Image -->

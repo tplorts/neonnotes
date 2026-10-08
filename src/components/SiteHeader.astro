@@ -1,5 +1,5 @@
 ---
-import { EVENTBRITE_URL } from "../config";
+import { TICKETS_URL, INSTAGRAM_URL } from "../config";
 ---
 
 <header class="bg-sand border-b-[3px] border-charcoal sticky top-0 z-50 overflow-visible">
@@ -19,9 +19,9 @@ import { EVENTBRITE_URL } from "../config";
         </ul>
       </nav>
 
-      <!-- Tickets button -->
-      <a href={EVENTBRITE_URL} target="_blank" rel="noopener noreferrer" class="font-mono font-black text-xs tracking-[0.3em] uppercase bg-mustard text-charcoal border-2 border-charcoal px-4 py-2 hover:bg-charcoal hover:text-mustard transition-colors whitespace-nowrap">
-        Tickets
+      <!-- Tickets button (links to Instagram between sessions) -->
+      <a href={TICKETS_URL ?? INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" class="font-mono font-black text-xs tracking-[0.3em] uppercase bg-mustard text-charcoal border-2 border-charcoal px-4 py-2 hover:bg-charcoal hover:text-mustard transition-colors whitespace-nowrap">
+        {TICKETS_URL ? "Tickets" : "Follow"}
       </a>
     </div>
 

@@ -1,5 +1,5 @@
 ---
-import { EVENTBRITE_URL } from "../config";
+import { TICKETS_URL, INSTAGRAM_URL } from "../config";
 
 interface Props {
   href?: string;
@@ -8,7 +8,7 @@ interface Props {
   size?: "sm" | "lg";
 }
 
-const { href = EVENTBRITE_URL, size = "lg" } = Astro.props;
+const { href = TICKETS_URL ?? INSTAGRAM_URL, size = "lg" } = Astro.props;
 
 const sizeClasses =
   size === "lg" ? "font-black px-10 py-4" : "font-bold px-8 py-3";
